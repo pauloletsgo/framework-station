@@ -40,7 +40,7 @@ export function GoldenCirclePage() {
             value={data.title}
             onChange={(e) => update("title", e.target.value)}
             className="text-xl sm:text-2xl font-bold text-center w-full bg-transparent outline-none mb-6 sm:mb-8 text-foreground"
-            placeholder="Titulo"
+            placeholder="Título"
           />
 
           {/* Concentric circles - visual only */}
@@ -75,12 +75,12 @@ export function GoldenCirclePage() {
           <div className="space-y-4">
             <div className="rounded-lg border p-4" style={{ backgroundColor: "#EF444410" }}>
               <label className="text-sm font-semibold block mb-2">
-                Por Que <span className="text-muted-foreground font-normal">(Why) — O proposito</span>
+                Por Que <span className="text-muted-foreground font-normal">(Why) — O propósito</span>
               </label>
               <Textarea
                 value={data.why}
                 onChange={(e) => update("why", e.target.value)}
-                placeholder="Qual e o proposito? Por que a organizacao existe? Qual a crenca central?"
+                placeholder="Qual é o propósito? Por que a organização existe? Qual a crença central?"
                 className="bg-transparent border-0 resize-none focus-visible:ring-0 p-0 text-sm"
                 rows={2}
               />
@@ -92,7 +92,7 @@ export function GoldenCirclePage() {
               <Textarea
                 value={data.how}
                 onChange={(e) => update("how", e.target.value)}
-                placeholder="Como voce realiza o proposito? Quais processos, valores e diferenciais?"
+                placeholder="Como você realiza o propósito? Quais processos, valores e diferenciais?"
                 className="bg-transparent border-0 resize-none focus-visible:ring-0 p-0 text-sm"
                 rows={2}
               />
@@ -104,7 +104,7 @@ export function GoldenCirclePage() {
               <Textarea
                 value={data.what}
                 onChange={(e) => update("what", e.target.value)}
-                placeholder="O que voce faz? Quais produtos ou servicos oferece?"
+                placeholder="O que você faz? Quais produtos ou serviços oferece?"
                 className="bg-transparent border-0 resize-none focus-visible:ring-0 p-0 text-sm"
                 rows={2}
               />
@@ -120,35 +120,35 @@ export function GoldenCirclePage() {
         />
       </div>
 
-      <SeoContentSection title="O que e o Golden Circle?">
+      <SeoContentSection title="O que é o Golden Circle?">
         <p>
-          O Golden Circle (Circulo Dourado) e um modelo de lideranca e comunicacao que propoe que
-          organizacoes e lideres inspiradores pensam, agem e se comunicam de dentro para fora —
-          comecando pelo "Por Que" (proposito), passando pelo "Como" (processo) e terminando no
+          O Golden Circle (Círculo Dourado) é um modelo de liderança e comunicação que propõe que
+          organizações e líderes inspiradores pensam, agem e se comunicam de dentro para fora —
+          começando pelo "Por Que" (propósito), passando pelo "Como" (processo) e terminando no
           "O Que" (produto).
         </p>
 
-        <h3>Origem e Historia</h3>
+        <h3>Origem e História</h3>
         <p>
-          O conceito foi criado por Simon Sinek, autor e palestrante britanico-americano, e
+          O conceito foi criado por Simon Sinek, autor e palestrante britânico-americano, e
           apresentado ao mundo em sua palestra TED "How Great Leaders Inspire Action" em setembro
           de 2009, que se tornou uma das palestras TED mais assistidas de todos os tempos. Sinek
           aprofundou o conceito em seu livro "Start with Why: How Great Leaders Inspire Everyone
           to Take Action" (2009).
         </p>
 
-        <h3>Os Tres Niveis</h3>
+        <h3>Os Três Níveis</h3>
         <ul>
-          <li><strong>Por Que (Why):</strong> O proposito, a causa, a crenca. Por que a organizacao existe? Por que voce faz o que faz? Poucos sabem articular isso claramente.</li>
-          <li><strong>Como (How):</strong> O processo, os valores, a proposta diferenciada. Como voce realiza o seu proposito? E o que torna a abordagem unica.</li>
-          <li><strong>O Que (What):</strong> Os produtos, servicos e resultados tangíveis. Toda organizacao sabe O QUE faz. E o nivel mais externo e obvio.</li>
+          <li><strong>Por Que (Why):</strong> O propósito, a causa, a crença. Por que a organização existe? Por que você faz o que faz? Poucos sabem articular isso claramente.</li>
+          <li><strong>Como (How):</strong> O processo, os valores, a proposta diferenciada. Como você realiza o seu propósito? É o que torna a abordagem única.</li>
+          <li><strong>O Que (What):</strong> Os produtos, serviços e resultados tangíveis. Toda organização sabe O QUE faz. É o nível mais externo e óbvio.</li>
         </ul>
 
         <h3>Quando Usar</h3>
         <p>
-          O Golden Circle e ideal para definir o proposito de uma marca, alinhar equipes em torno
-          de uma visao, criar mensagens de marketing inspiradoras e repensar a comunicacao
-          estrategica de qualquer organizacao.
+          O Golden Circle é ideal para definir o propósito de uma marca, alinhar equipes em torno
+          de uma visão, criar mensagens de marketing inspiradoras e repensar a comunicação
+          estratégica de qualquer organização.
         </p>
 
         <p className="text-xs mt-6">

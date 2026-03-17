@@ -41,14 +41,14 @@ const blocks: {
   {
     field: "keyPartners",
     label: "Parceiros-Chave",
-    placeholder: "Quem sao seus parceiros e fornecedores estrategicos?",
+    placeholder: "Quem são seus parceiros e fornecedores estratégicos?",
     color: "#8B5CF6",
     gridArea: "1 / 1 / 3 / 3",
   },
   {
     field: "keyActivities",
     label: "Atividades-Chave",
-    placeholder: "Quais atividades essenciais seu modelo de negocio exige?",
+    placeholder: "Quais atividades essenciais seu modelo de negócio exige?",
     color: "#3B82F6",
     gridArea: "1 / 3 / 2 / 5",
   },
@@ -62,7 +62,7 @@ const blocks: {
   {
     field: "valuePropositions",
     label: "Proposta de Valor",
-    placeholder: "Qual valor voce entrega ao cliente? Que problema resolve?",
+    placeholder: "Qual valor você entrega ao cliente? Que problema resolve?",
     color: "#22C55E",
     gridArea: "1 / 5 / 3 / 7",
   },
@@ -76,28 +76,28 @@ const blocks: {
   {
     field: "channels",
     label: "Canais",
-    placeholder: "Como voce alcanca e entrega valor aos clientes?",
+    placeholder: "Como você alcança e entrega valor aos clientes?",
     color: "#F97316",
     gridArea: "2 / 7 / 3 / 9",
   },
   {
     field: "customerSegments",
     label: "Segmentos de Clientes",
-    placeholder: "Para quem voce esta criando valor? Quem sao seus clientes?",
+    placeholder: "Para quem você está criando valor? Quem são seus clientes?",
     color: "#EF4444",
     gridArea: "1 / 9 / 3 / 11",
   },
   {
     field: "costStructure",
     label: "Estrutura de Custos",
-    placeholder: "Quais sao os custos mais importantes do modelo de negocio?",
+    placeholder: "Quais são os custos mais importantes do modelo de negócio?",
     color: "#64748B",
     gridArea: "3 / 1 / 4 / 6",
   },
   {
     field: "revenueStreams",
     label: "Fontes de Receita",
-    placeholder: "Pelo que os clientes estao realmente dispostos a pagar?",
+    placeholder: "Pelo que os clientes estão realmente dispostos a pagar?",
     color: "#059669",
     gridArea: "3 / 6 / 4 / 11",
   },
@@ -124,7 +124,7 @@ export function BusinessModelCanvasPage() {
             value={data.title}
             onChange={(e) => update("title", e.target.value)}
             className="text-xl sm:text-2xl font-bold text-center w-full bg-transparent outline-none mb-4 sm:mb-6 text-foreground"
-            placeholder="Titulo"
+            placeholder="Título"
           />
 
           {/* Desktop: CSS Grid layout */}
@@ -180,40 +180,40 @@ export function BusinessModelCanvasPage() {
         />
       </div>
 
-      <SeoContentSection title="O que e o Business Model Canvas?">
+      <SeoContentSection title="O que é o Business Model Canvas?">
         <p>
-          O Business Model Canvas (BMC) e uma ferramenta de gestao estrategica que permite
-          desenvolver e esbocar modelos de negocios novos ou existentes. Ele organiza os
-          elementos essenciais de um negocio em nove blocos interconectados em uma unica
-          pagina visual.
+          O Business Model Canvas (BMC) é uma ferramenta de gestão estratégica que permite
+          desenvolver e esboçar modelos de negócios novos ou existentes. Ele organiza os
+          elementos essenciais de um negócio em nove blocos interconectados em uma única
+          página visual.
         </p>
 
-        <h3>Origem e Historia</h3>
+        <h3>Origem e História</h3>
         <p>
-          O Business Model Canvas foi criado por Alexander Osterwalder, teorico de negocios suico,
-          como parte de sua tese de doutorado na Universite de Lausanne. O modelo foi popularizado
+          O Business Model Canvas foi criado por Alexander Osterwalder, teórico de negócios suíço,
+          como parte de sua tese de doutorado na Université de Lausanne. O modelo foi popularizado
           no livro "Business Model Generation" (2010), co-escrito com Yves Pigneur e co-criado com
-          uma comunidade de 470 praticantes de 45 paises. O livro se tornou referencia mundial em
-          inovacao de modelos de negocios.
+          uma comunidade de 470 praticantes de 45 países. O livro se tornou referência mundial em
+          inovação de modelos de negócios.
         </p>
 
         <h3>Os Nove Blocos</h3>
         <ul>
-          <li><strong>Segmentos de Clientes:</strong> Os diferentes grupos de pessoas ou organizacoes que a empresa pretende servir.</li>
-          <li><strong>Proposta de Valor:</strong> O pacote de produtos e servicos que cria valor para um segmento especifico.</li>
+          <li><strong>Segmentos de Clientes:</strong> Os diferentes grupos de pessoas ou organizações que a empresa pretende servir.</li>
+          <li><strong>Proposta de Valor:</strong> O pacote de produtos e serviços que cria valor para um segmento específico.</li>
           <li><strong>Canais:</strong> Como a empresa se comunica e entrega sua proposta de valor.</li>
-          <li><strong>Relacionamento com Clientes:</strong> Os tipos de relacao estabelecidos com cada segmento.</li>
+          <li><strong>Relacionamento com Clientes:</strong> Os tipos de relação estabelecidos com cada segmento.</li>
           <li><strong>Fontes de Receita:</strong> O dinheiro que a empresa gera de cada segmento.</li>
           <li><strong>Recursos-Chave:</strong> Os ativos mais importantes para o funcionamento do modelo.</li>
-          <li><strong>Atividades-Chave:</strong> As acoes mais importantes para operar com sucesso.</li>
+          <li><strong>Atividades-Chave:</strong> As ações mais importantes para operar com sucesso.</li>
           <li><strong>Parceiros-Chave:</strong> A rede de fornecedores e parceiros essenciais.</li>
-          <li><strong>Estrutura de Custos:</strong> Todos os custos envolvidos na operacao do modelo.</li>
+          <li><strong>Estrutura de Custos:</strong> Todos os custos envolvidos na operação do modelo.</li>
         </ul>
 
         <h3>Quando Usar</h3>
         <p>
-          O BMC e ideal para startups validando ideias, empresas repensando seus modelos, equipes
-          alinhando visao estrategica, e empreendedores comunicando suas ideias de forma visual
+          O BMC é ideal para startups validando ideias, empresas repensando seus modelos, equipes
+          alinhando visão estratégica, e empreendedores comunicando suas ideias de forma visual
           e objetiva.
         </p>
 

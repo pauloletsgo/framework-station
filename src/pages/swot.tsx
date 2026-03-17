@@ -11,7 +11,7 @@ interface SwotData {
 }
 
 const defaultData: SwotData = {
-  title: "Analise SWOT",
+  title: "Análise SWOT",
   cells: ["", "", "", ""],
 };
 
@@ -40,7 +40,7 @@ export function SwotPage() {
           onTitleChange={(title) => setData((prev) => ({ ...prev, title }))}
           cells={[
             {
-              label: "Forcas (Strengths)",
+              label: "Forças (Strengths)",
               color: "#22C55E",
               value: data.cells[0],
               placeholder: "Liste os pontos fortes internos...",
@@ -58,10 +58,10 @@ export function SwotPage() {
               placeholder: "Liste as oportunidades externas...",
             },
             {
-              label: "Ameacas (Threats)",
+              label: "Ameaças (Threats)",
               color: "#F59E0B",
               value: data.cells[3],
-              placeholder: "Liste as ameacas externas...",
+              placeholder: "Liste as ameaças externas...",
             },
           ]}
           onCellChange={handleCellChange}
@@ -70,22 +70,22 @@ export function SwotPage() {
         <ExportToolbar
           targetRef={matrixRef}
           fileName="analise-swot"
-          title="Analise SWOT"
+          title="Análise SWOT"
           onReset={() => setData(defaultData)}
         />
       </div>
 
-      <SeoContentSection title="O que e a Matriz SWOT?">
+      <SeoContentSection title="O que é a Matriz SWOT?">
         <p>
-          A Matriz SWOT (tambem conhecida como Analise SWOT ou FOFA em portugues) e uma
-          ferramenta de planejamento estrategico utilizada para identificar Forcas (Strengths),
-          Fraquezas (Weaknesses), Oportunidades (Opportunities) e Ameacas (Threats) relacionadas
-          a um projeto, negocio ou situacao.
+          A Matriz SWOT (também conhecida como Análise SWOT ou FOFA em português) é uma
+          ferramenta de planejamento estratégico utilizada para identificar Forças (Strengths),
+          Fraquezas (Weaknesses), Oportunidades (Opportunities) e Ameaças (Threats) relacionadas
+          a um projeto, negócio ou situação.
         </p>
 
-        <h3>Origem e Historia</h3>
+        <h3>Origem e História</h3>
         <p>
-          A analise SWOT foi desenvolvida na decada de 1960 por Albert Humphrey, pesquisador do
+          A análise SWOT foi desenvolvida na década de 1960 por Albert Humphrey, pesquisador do
           Stanford Research Institute (SRI), durante um projeto de pesquisa financiado pelas 500
           maiores empresas da revista Fortune. O objetivo era entender por que o planejamento
           corporativo falhava consistentemente. O framework original era chamado de SOFT analysis
@@ -95,17 +95,17 @@ export function SwotPage() {
 
         <h3>Como Usar</h3>
         <ul>
-          <li><strong>Forcas:</strong> Identifique vantagens internas, recursos unicos, competencias e diferenciais.</li>
-          <li><strong>Fraquezas:</strong> Reconheca limitacoes internas, areas de melhoria e desvantagens.</li>
-          <li><strong>Oportunidades:</strong> Explore fatores externos favoraveis, tendencias e mudancas de mercado.</li>
-          <li><strong>Ameacas:</strong> Mapeie riscos externos, concorrencia, regulacoes e obstaculos.</li>
+          <li><strong>Forças:</strong> Identifique vantagens internas, recursos únicos, competências e diferenciais.</li>
+          <li><strong>Fraquezas:</strong> Reconheça limitações internas, áreas de melhoria e desvantagens.</li>
+          <li><strong>Oportunidades:</strong> Explore fatores externos favoráveis, tendências e mudanças de mercado.</li>
+          <li><strong>Ameaças:</strong> Mapeie riscos externos, concorrência, regulações e obstáculos.</li>
         </ul>
 
         <h3>Quando Usar</h3>
         <p>
-          A Matriz SWOT e ideal para planejamento estrategico, analise de viabilidade de novos
-          projetos, avaliacao de posicao competitiva e tomada de decisoes que exigem uma visao
-          holistica de fatores internos e externos.
+          A Matriz SWOT é ideal para planejamento estratégico, análise de viabilidade de novos
+          projetos, avaliação de posição competitiva e tomada de decisões que exigem uma visão
+          holística de fatores internos e externos.
         </p>
 
         <p className="text-xs mt-6">

@@ -225,7 +225,7 @@ export function TierListTool() {
     const url = urlInput.trim();
     if (!url) return;
     if (!url.startsWith("http://") && !url.startsWith("https://")) {
-      toast({ title: "URL invalida", description: "A URL precisa comecar com http:// ou https://", variant: "destructive" });
+      toast({ title: "URL inválida", description: "A URL precisa começar com http:// ou https://", variant: "destructive" });
       return;
     }
     setPoolItems((prev) => [...prev, { id: generateId(), dataUrl: url }]);
@@ -376,7 +376,7 @@ export function TierListTool() {
         URL.revokeObjectURL(url);
         toast({
           title: "Imagem gerada!",
-          description: "Seu navegador nao suporta compartilhamento direto de imagem. O download foi iniciado - compartilhe o arquivo manualmente.",
+          description: "Seu navegador não suporta compartilhamento direto de imagem. O download foi iniciado - compartilhe o arquivo manualmente.",
         });
       }
     } catch (err: unknown) {

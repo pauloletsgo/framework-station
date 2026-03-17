@@ -19,7 +19,7 @@ export function ImagePool({ items, onDeleteItem }: ImagePoolProps) {
       <div className="flex items-center gap-2 mb-2 px-1">
         <GripVertical className="w-4 h-4 text-white/40" />
         <p className="text-white/50 text-xs">
-          Clique e arraste as imagens para o centro de uma linha acima. Quando a linha mudar de cor, solte a imagem para posiciona-la naquele tier.
+          Clique e arraste as imagens para o centro de uma linha acima. Quando a linha mudar de cor, solte a imagem para posicioná-la naquele tier.
         </p>
       </div>
       <div

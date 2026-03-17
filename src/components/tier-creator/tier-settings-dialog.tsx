@@ -41,7 +41,7 @@ export function TierSettingsDialog({
         <DialogHeader>
           <DialogTitle>Configurar Tier</DialogTitle>
           <DialogDescription>
-            Ajuste as configuracoes desta linha da tier list.
+            Ajuste as configurações desta linha da tier list.
           </DialogDescription>
         </DialogHeader>
 

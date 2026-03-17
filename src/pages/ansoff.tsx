@@ -44,28 +44,28 @@ export function AnsoffPage() {
           yAxisValues={["Existentes", "Novos"]}
           cells={[
             {
-              label: "Penetracao de Mercado",
+              label: "Penetração de Mercado",
               color: "#22C55E",
               value: data.cells[0],
-              placeholder: "Estrategias para vender mais dos produtos atuais nos mercados atuais...",
+              placeholder: "Estratégias para vender mais dos produtos atuais nos mercados atuais...",
             },
             {
               label: "Desenvolvimento de Produto",
               color: "#3B82F6",
               value: data.cells[1],
-              placeholder: "Estrategias para criar novos produtos para os mercados atuais...",
+              placeholder: "Estratégias para criar novos produtos para os mercados atuais...",
             },
             {
               label: "Desenvolvimento de Mercado",
               color: "#F59E0B",
               value: data.cells[2],
-              placeholder: "Estrategias para levar produtos atuais a novos mercados...",
+              placeholder: "Estratégias para levar produtos atuais a novos mercados...",
             },
             {
-              label: "Diversificacao",
+              label: "Diversificação",
               color: "#EF4444",
               value: data.cells[3],
-              placeholder: "Estrategias para novos produtos em novos mercados...",
+              placeholder: "Estratégias para novos produtos em novos mercados...",
             },
           ]}
           onCellChange={handleCellChange}
@@ -79,34 +79,34 @@ export function AnsoffPage() {
         />
       </div>
 
-      <SeoContentSection title="O que e a Matriz de Ansoff?">
+      <SeoContentSection title="O que é a Matriz de Ansoff?">
         <p>
-          A Matriz de Ansoff, tambem conhecida como Matriz Produto-Mercado, e uma ferramenta de
-          planejamento estrategico que ajuda empresas a definir suas estrategias de crescimento.
-          Ela cruza duas dimensoes — produtos (existentes e novos) e mercados (existentes e novos)
-          — gerando quatro estrategias possiveis.
+          A Matriz de Ansoff, também conhecida como Matriz Produto-Mercado, é uma ferramenta de
+          planejamento estratégico que ajuda empresas a definir suas estratégias de crescimento.
+          Ela cruza duas dimensões — produtos (existentes e novos) e mercados (existentes e novos)
+          — gerando quatro estratégias possíveis.
         </p>
 
-        <h3>Origem e Historia</h3>
+        <h3>Origem e História</h3>
         <p>
-          Criada por H. Igor Ansoff, considerado o pai da gestao estrategica, a matriz foi
+          Criada por H. Igor Ansoff, considerado o pai da gestão estratégica, a matriz foi
           publicada pela primeira vez no artigo "Strategies for Diversification" na Harvard
-          Business Review em 1957. Ansoff era um matematico e estrategista de negocios
-          russo-americano que revolucionou o campo do planejamento estrategico corporativo.
+          Business Review em 1957. Ansoff era um matemático e estrategista de negócios
+          russo-americano que revolucionou o campo do planejamento estratégico corporativo.
         </p>
 
-        <h3>As Quatro Estrategias</h3>
+        <h3>As Quatro Estratégias</h3>
         <ul>
-          <li><strong>Penetracao de Mercado:</strong> Menor risco. Vender mais do mesmo produto no mercado atual (ex: promocoes, fidelizacao).</li>
+          <li><strong>Penetração de Mercado:</strong> Menor risco. Vender mais do mesmo produto no mercado atual (ex: promoções, fidelização).</li>
           <li><strong>Desenvolvimento de Produto:</strong> Risco moderado. Criar novos produtos para o mercado atual (ex: novas funcionalidades, variantes).</li>
-          <li><strong>Desenvolvimento de Mercado:</strong> Risco moderado. Expandir produtos atuais para novos mercados (ex: nova regiao, novo segmento).</li>
-          <li><strong>Diversificacao:</strong> Maior risco. Novos produtos em novos mercados (ex: entrar em uma industria diferente).</li>
+          <li><strong>Desenvolvimento de Mercado:</strong> Risco moderado. Expandir produtos atuais para novos mercados (ex: nova região, novo segmento).</li>
+          <li><strong>Diversificação:</strong> Maior risco. Novos produtos em novos mercados (ex: entrar em uma indústria diferente).</li>
         </ul>
 
         <h3>Quando Usar</h3>
         <p>
-          A Matriz de Ansoff e ideal quando a empresa precisa definir caminhos de crescimento,
-          avaliar riscos de expansao ou decidir entre focar no mercado atual ou explorar novas
+          A Matriz de Ansoff é ideal quando a empresa precisa definir caminhos de crescimento,
+          avaliar riscos de expansão ou decidir entre focar no mercado atual ou explorar novas
           oportunidades.
         </p>
 

@@ -14,25 +14,25 @@ export function TierCreatorPage() {
         <TierListTool />
       </div>
 
-      <SeoContentSection title="O que e um Tier Creator?">
+      <SeoContentSection title="O que é um Tier Creator?">
         <p>
-          Um Tier Creator (criador de tiers ou classificacoes) e uma ferramenta que permite
-          organizar itens — como produtos, personagens, opcoes ou qualquer coisa — em niveis
-          hierarquicos, geralmente de S (melhor) a D ou F (pior).
+          Um Tier Creator (criador de tiers ou classificações) é uma ferramenta que permite
+          organizar itens — como produtos, personagens, opções ou qualquer coisa — em níveis
+          hierárquicos, geralmente de S (melhor) a D ou F (pior).
         </p>
 
         <h3>Como Funciona</h3>
         <ul>
           <li>Adicione imagens dos itens que deseja classificar (via upload ou URL)</li>
           <li>Arraste e solte cada item no nivel desejado (S, A, B, C, D)</li>
-          <li>Personalize cores, labels e quantidade de niveis</li>
+          <li>Personalize cores, labels e quantidade de níveis</li>
           <li>Exporte sua tier list como imagem PNG para compartilhar</li>
         </ul>
 
         <h3>Quando Usar</h3>
         <p>
-          Tier lists sao populares para comparar e classificar qualquer tipo de item de forma
-          visual e intuitiva — desde produtos e servicos ate ideias e prioridades de projeto.
+          Tier lists são populares para comparar e classificar qualquer tipo de item de forma
+          visual e intuitiva — desde produtos e serviços até ideias e prioridades de projeto.
         </p>
       </SeoContentSection>
     </PageLayout>

@@ -38,7 +38,7 @@ export function BcgPage() {
           ref={matrixRef}
           title={data.title}
           onTitleChange={(title) => setData((prev) => ({ ...prev, title }))}
-          xAxisLabel="Participacao de Mercado"
+          xAxisLabel="Participação de Mercado"
           yAxisLabel="Crescimento do Mercado"
           xAxisValues={["Alta", "Baixa"]}
           yAxisValues={["Alto", "Baixo"]}
@@ -47,25 +47,25 @@ export function BcgPage() {
               label: "\u2B50 Estrelas (Stars)",
               color: "#F59E0B",
               value: data.cells[0],
-              placeholder: "Produtos com alta participacao em mercados de alto crescimento...",
+              placeholder: "Produtos com alta participação em mercados de alto crescimento...",
             },
             {
-              label: "\u2753 Interrogacoes (Question Marks)",
+              label: "\u2753 Interrogações (Question Marks)",
               color: "#8B5CF6",
               value: data.cells[1],
-              placeholder: "Produtos com baixa participacao em mercados de alto crescimento...",
+              placeholder: "Produtos com baixa participação em mercados de alto crescimento...",
             },
             {
               label: "\uD83D\uDCB0 Vacas Leiteiras (Cash Cows)",
               color: "#22C55E",
               value: data.cells[2],
-              placeholder: "Produtos com alta participacao em mercados de baixo crescimento...",
+              placeholder: "Produtos com alta participação em mercados de baixo crescimento...",
             },
             {
               label: "\uD83D\uDC3E Abacaxis (Dogs)",
               color: "#EF4444",
               value: data.cells[3],
-              placeholder: "Produtos com baixa participacao em mercados de baixo crescimento...",
+              placeholder: "Produtos com baixa participação em mercados de baixo crescimento...",
             },
           ]}
           onCellChange={handleCellChange}
@@ -79,35 +79,35 @@ export function BcgPage() {
         />
       </div>
 
-      <SeoContentSection title="O que e a Matriz BCG?">
+      <SeoContentSection title="O que é a Matriz BCG?">
         <p>
-          A Matriz BCG (Boston Consulting Group Matrix), tambem chamada de Matriz de Crescimento-Participacao,
-          e uma ferramenta de analise de portfolio que classifica produtos ou unidades de negocio em
-          quatro categorias baseadas em duas dimensoes: taxa de crescimento do mercado e participacao
+          A Matriz BCG (Boston Consulting Group Matrix), também chamada de Matriz de Crescimento-Participação,
+          é uma ferramenta de análise de portfólio que classifica produtos ou unidades de negócio em
+          quatro categorias baseadas em duas dimensões: taxa de crescimento do mercado e participação
           relativa de mercado.
         </p>
 
-        <h3>Origem e Historia</h3>
+        <h3>Origem e História</h3>
         <p>
           A Matriz BCG foi criada em 1970 por Bruce Henderson, fundador do Boston Consulting Group.
-          Henderson desenvolveu o modelo para ajudar empresas a decidir em quais unidades de negocio
-          investir, manter ou desinvestir. O conceito se baseia na ideia de que a participacao de mercado
-          esta diretamente relacionada a geracao de caixa, enquanto o crescimento do mercado exige
+          Henderson desenvolveu o modelo para ajudar empresas a decidir em quais unidades de negócio
+          investir, manter ou desinvestir. O conceito se baseia na ideia de que a participação de mercado
+          está diretamente relacionada à geração de caixa, enquanto o crescimento do mercado exige
           investimentos.
         </p>
 
         <h3>As Quatro Categorias</h3>
         <ul>
-          <li><strong>Estrelas:</strong> Alta participacao + alto crescimento. Lideres de mercado que precisam de investimento para manter posicao. Potencial para se tornarem vacas leiteiras.</li>
-          <li><strong>Interrogacoes:</strong> Baixa participacao + alto crescimento. Requerem decisao: investir para crescer ou abandonar.</li>
-          <li><strong>Vacas Leiteiras:</strong> Alta participacao + baixo crescimento. Geram caixa excedente com pouco investimento. Financiam outras unidades.</li>
-          <li><strong>Abacaxis (Dogs):</strong> Baixa participacao + baixo crescimento. Candidatos a desinvestimento ou reposicionamento.</li>
+          <li><strong>Estrelas:</strong> Alta participação + alto crescimento. Líderes de mercado que precisam de investimento para manter posição. Potencial para se tornarem vacas leiteiras.</li>
+          <li><strong>Interrogações:</strong> Baixa participação + alto crescimento. Requerem decisão: investir para crescer ou abandonar.</li>
+          <li><strong>Vacas Leiteiras:</strong> Alta participação + baixo crescimento. Geram caixa excedente com pouco investimento. Financiam outras unidades.</li>
+          <li><strong>Abacaxis (Dogs):</strong> Baixa participação + baixo crescimento. Candidatos a desinvestimento ou reposicionamento.</li>
         </ul>
 
         <h3>Quando Usar</h3>
         <p>
-          A Matriz BCG e ideal para analise de portfolio de produtos, alocacao de recursos entre
-          unidades de negocio e decisoes de investimento ou desinvestimento estrategico.
+          A Matriz BCG é ideal para análise de portfólio de produtos, alocação de recursos entre
+          unidades de negócio e decisões de investimento ou desinvestimento estratégico.
         </p>
 
         <p className="text-xs mt-6">

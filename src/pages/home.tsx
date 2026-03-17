@@ -33,8 +33,8 @@ export function HomePage() {
             Framework Station
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Ferramentas interativas dos principais frameworks de negocios,
-            marketing e estrategia. Escolha, preencha e exporte &mdash; tudo
+            Ferramentas interativas dos principais frameworks de negócios,
+            marketing e estratégia. Escolha, preencha e exporte &mdash; tudo
             direto no seu navegador.
           </p>
           <div className="pt-4">

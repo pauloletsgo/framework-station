@@ -70,7 +70,7 @@ export function TierRow({
         </SortableContext>
       </div>
 
-      <div className="flex items-center gap-0.5 px-1 shrink-0" style={{ backgroundColor: darkenColor(rowBgColor, 10) }}>
+      <div data-settings-col className="flex items-center gap-0.5 px-1 shrink-0" style={{ backgroundColor: darkenColor(rowBgColor, 10) }}>
         <button
           data-testid={`button-settings-${tier.id}`}
           onClick={onOpenSettings}

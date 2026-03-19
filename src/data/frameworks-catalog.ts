@@ -5,9 +5,9 @@ import {
   Target,
   CircleDot,
   LayoutDashboard,
-  Trophy,
 } from "lucide-react";
 import { SwotIcon } from "@/components/icons/swot-icon";
+import { TrophyIcon } from "@/components/icons/trophy-icon";
 import type { FrameworkInfo } from "@/types/frameworks";
 
 export const frameworks: FrameworkInfo[] = [
@@ -79,8 +79,8 @@ export const frameworks: FrameworkInfo[] = [
     name: "Tier Creator",
     description:
       "Crie listas de classificação (tier lists) arrastando e organizando itens por níveis.",
-    icon: Trophy,
+    icon: TrophyIcon,
     tags: ["classificação", "ranking", "organização"],
-    color: "#EC4899",
+    color: "#FFC800",
   },
 ];

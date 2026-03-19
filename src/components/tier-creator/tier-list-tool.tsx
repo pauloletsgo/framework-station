@@ -14,7 +14,10 @@ import {
   type UniqueIdentifier,
 } from "@dnd-kit/core";
 import { arrayMove } from "@dnd-kit/sortable";
-import { Download, RotateCcw, Palette, Share2, Pencil, Link2, Sun, Moon, Trophy } from "lucide-react";
+import { Download, Printer, RotateCcw, Palette, Pencil, Link2, Sun, Moon } from "lucide-react";
+import { Link } from "wouter";
+import { TrophyIcon } from "@/components/icons/trophy-icon";
+import { FrameworkStationIcon } from "@/components/icons/framework-station-icon";
 import { Button } from "@/components/ui/button";
 import { TierRow } from "@/components/tier-creator/tier-row";
 import { ImagePool } from "@/components/tier-creator/image-pool";
@@ -72,7 +75,6 @@ export function TierListTool() {
   const [settingsForTier, setSettingsForTier] = useState<string | null>(null);
   const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);
   const [urlInput, setUrlInput] = useState("");
-  const [isSharing, setIsSharing] = useState(false);
   const tierListRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
@@ -324,11 +326,47 @@ export function TierListTool() {
 
   const generateTierImage = async (): Promise<Blob | null> => {
     if (!tierListRef.current) return null;
-    const canvas = await html2canvas(tierListRef.current, {
+    const el = tierListRef.current;
+
+    // Wait for all images inside the tier list to finish loading
+    const images = el.querySelectorAll("img");
+    await Promise.all(
+      Array.from(images).map(
+        (img) =>
+          new Promise<void>((resolve) => {
+            if (img.complete && img.naturalHeight > 0) {
+              resolve();
+            } else {
+              img.onload = () => resolve();
+              img.onerror = () => resolve();
+            }
+          })
+      )
+    );
+
+    // Use onclone to modify the CLONED DOM (not the live page)
+    const canvas = await html2canvas(el, {
       backgroundColor: rowBgColor,
       useCORS: true,
+      allowTaint: true,
       scale: 2,
+      scrollX: 0,
+      scrollY: -window.scrollY,
+      onclone: (_doc: Document, clonedEl: HTMLElement) => {
+        // Hide settings columns in the clone
+        clonedEl.querySelectorAll<HTMLElement>("[data-settings-col]").forEach(
+          (col) => (col.style.display = "none")
+        );
+        // Remove CSS transforms from draggable items (dnd-kit adds translate3d)
+        clonedEl.querySelectorAll<HTMLElement>("[data-testid^='draggable-item']").forEach(
+          (item) => {
+            item.style.transform = "none";
+            item.style.transition = "none";
+          }
+        );
+      },
     });
+
     return new Promise((resolve) => {
       canvas.toBlob((blob) => resolve(blob), "image/png");
     });
@@ -350,44 +388,6 @@ export function TierListTool() {
     }
   };
 
-  const handleShare = async () => {
-    if (isSharing) return;
-    setIsSharing(true);
-    try {
-      const blob = await generateTierImage();
-      if (!blob) {
-        toast({ title: "Erro", description: "Falha ao gerar imagem para compartilhar.", variant: "destructive" });
-        return;
-      }
-      const file = new File([blob], `${title.replace(/\s+/g, "_")}_tierlist.png`, { type: "image/png" });
-
-      if (navigator.share && navigator.canShare && navigator.canShare({ files: [file] })) {
-        await navigator.share({
-          title: title,
-          text: `Confira minha tier list: ${title}`,
-          files: [file],
-        });
-      } else {
-        const url = URL.createObjectURL(blob);
-        const link = document.createElement("a");
-        link.download = `${title.replace(/\s+/g, "_")}_tierlist.png`;
-        link.href = url;
-        link.click();
-        URL.revokeObjectURL(url);
-        toast({
-          title: "Imagem gerada!",
-          description: "Seu navegador não suporta compartilhamento direto de imagem. O download foi iniciado - compartilhe o arquivo manualmente.",
-        });
-      }
-    } catch (err: unknown) {
-      if (err instanceof Error && err.name !== "AbortError") {
-        toast({ title: "Erro", description: "Falha ao compartilhar.", variant: "destructive" });
-      }
-    } finally {
-      setIsSharing(false);
-    }
-  };
-
   const handleDeletePoolItem = (itemId: string) => {
     setPoolItems((prev) => prev.filter((i) => i.id !== itemId));
   };
@@ -396,16 +396,56 @@ export function TierListTool() {
     ? tiers.find((t) => t.id === settingsForTier)
     : null;
 
+  const handlePrint = () => {
+    window.print();
+  };
+
   return (
-    <div className="min-h-screen transition-colors" style={{ backgroundColor: pageBgColor }}>
-      <div className="max-w-6xl mx-auto px-4 py-6">
-        <div className="mb-6 flex items-center justify-between">
-          <div className="flex-1">
-            <div className="flex items-center gap-2">
-              <Trophy className={`w-8 h-8 ${darkMode ? "text-yellow-400" : "text-yellow-600"}`} />
-              <span className={`hidden md:inline text-xl font-bold ${textColor}`}>Tier Creator</span>
-            </div>
+    <div className="min-h-screen flex flex-col transition-colors" style={{ backgroundColor: pageBgColor }}>
+      {/* ─── Header ──────────────────────────────── */}
+      <header
+        className="sticky top-0 z-50 backdrop-blur-md border-b"
+        style={{
+          backgroundColor: darkMode ? "rgba(15,15,26,0.9)" : "rgba(245,245,245,0.9)",
+          borderColor: darkMode ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)",
+        }}
+      >
+        <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
+          {/* Left: Page identity */}
+          <div className="flex items-center gap-2">
+            <TrophyIcon className={`w-6 h-6 ${darkMode ? "text-yellow-400" : "text-yellow-600"}`} />
+            <span className={`font-bold text-lg hidden sm:inline ${textColor}`}>
+              Tier Creator
+            </span>
           </div>
+
+          {/* Center: Framework Station logo */}
+          <Link
+            href="/"
+            className={`flex items-center gap-2 hover:opacity-80 transition-opacity ${textColor}`}
+          >
+            <FrameworkStationIcon className={`h-5 w-5 ${darkMode ? "text-red-400" : "text-red-500"}`} />
+            <span className="font-semibold text-base hidden sm:inline">Framework Station</span>
+          </Link>
+
+          {/* Right: Dark/Light toggle */}
+          <Button
+            data-testid="button-toggle-mode"
+            variant="outline"
+            size="icon"
+            onClick={() => setDarkMode(!darkMode)}
+            className={btnBg}
+          >
+            {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
+          </Button>
+        </div>
+      </header>
+
+      {/* ─── Main Content ────────────────────────── */}
+      <main className="flex-1">
+      <div className="max-w-5xl mx-auto px-4 py-6">
+        {/* Title */}
+        <div className="mb-6 flex items-center justify-center">
           <div className="flex items-center gap-3">
             {isEditingTitle ? (
               <input
@@ -433,17 +473,6 @@ export function TierListTool() {
               </button>
             )}
           </div>
-          <div className="flex-1 flex justify-end">
-            <Button
-              data-testid="button-toggle-mode"
-              variant="outline"
-              size="icon"
-              onClick={() => setDarkMode(!darkMode)}
-              className={btnBg}
-            >
-              {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
-            </Button>
-          </div>
         </div>
 
         <DndContext
@@ -453,7 +482,7 @@ export function TierListTool() {
           onDragOver={handleDragOver}
           onDragEnd={handleDragEnd}
         >
-          <div ref={tierListRef} className="rounded-md overflow-hidden" style={{ backgroundColor: rowBgColor }}>
+          <div ref={tierListRef} className="print-area rounded-md overflow-hidden" style={{ backgroundColor: rowBgColor }}>
             <div className="mb-0.5 flex items-center justify-center py-2">
               <h2 className="text-lg font-bold" style={{ color: isLightColor(rowBgColor) ? "#1a1a1a" : "#ffffffE6" }}>{title}</h2>
             </div>
@@ -540,14 +569,13 @@ export function TierListTool() {
             Download
           </Button>
           <Button
-            data-testid="button-share"
+            data-testid="button-print"
             variant="outline"
-            onClick={handleShare}
-            disabled={isSharing}
+            onClick={handlePrint}
             className={btnBg}
           >
-            <Share2 className="w-4 h-4 mr-2" />
-            {isSharing ? "Gerando..." : "Compartilhar"}
+            <Printer className="w-4 h-4 mr-2" />
+            Imprimir
           </Button>
           <Button
             data-testid="button-reset"
@@ -602,6 +630,113 @@ export function TierListTool() {
           onAddBelow={() => settingsForTier && addTierBelow(settingsForTier)}
         />
       </div>
+
+        {/* ─── SEO Content Section ─────────────── */}
+        <div
+          style={{
+            backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
+            color: darkMode ? "#cbd5e1" : "#334155",
+          }}
+        >
+          <section className="max-w-3xl mx-auto px-4 py-12 sm:py-16">
+            <h2 className="text-2xl font-bold mb-6" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
+              O que é o Tier Creator?
+            </h2>
+            <div className="space-y-4 text-sm sm:text-base leading-relaxed">
+              <p>
+                O Tier Creator (criador de tiers ou classificações) é uma ferramenta que permite
+                organizar itens — como produtos, personagens, opções ou qualquer coisa — em níveis
+                hierárquicos, geralmente de S (melhor) a D ou F (pior).
+              </p>
+
+              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
+                Como Funciona
+              </h3>
+              <ul className="list-disc pl-5 space-y-1">
+                <li>Adicione imagens dos itens que deseja classificar (via upload ou URL)</li>
+                <li>Arraste e solte cada item no nível desejado (S, A, B, C, D)</li>
+                <li>Personalize cores, labels e quantidade de níveis</li>
+                <li>Exporte sua tier list como imagem PNG para compartilhar</li>
+              </ul>
+
+              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
+                Quando Usar
+              </h3>
+              <p>
+                Tier lists são populares para comparar e classificar qualquer tipo de item de forma
+                visual e intuitiva — desde produtos e serviços até ideias e prioridades de projeto.
+              </p>
+            </div>
+          </section>
+        </div>
+      </main>
+
+      {/* ─── Footer ──────────────────────────────── */}
+      <footer
+        className="border-t py-6 px-4"
+        style={{
+          borderColor: darkMode ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)",
+          backgroundColor: darkMode ? "#080812" : "#e8e8e8",
+        }}
+      >
+        <div className="max-w-7xl mx-auto text-center text-sm" style={{ color: "#64748b" }}>
+          <p>
+            Framework Station &mdash; Ferramentas interativas de frameworks de negócios, marketing e
+            estratégia.
+          </p>
+          <p className="mt-1">&copy; {new Date().getFullYear()} frameworkstation.com.br</p>
+        </div>
+      </footer>
+
+      {/* ─── Print Styles ────────────────────────── */}
+      <style>{`
+        @media print {
+          /* Force browser to print background colors and images */
+          * {
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+          }
+
+          body * {
+            visibility: hidden;
+          }
+
+          .print-area, .print-area * {
+            visibility: visible !important;
+          }
+
+          .print-area {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+          }
+
+          /* Hide non-printable elements */
+          header, footer, nav {
+            display: none !important;
+          }
+
+          /* Hide settings/controls inside tier rows */
+          .print-area button {
+            display: none !important;
+          }
+          .print-area [data-testid^="button-settings"],
+          .print-area [data-testid^="button-move"] {
+            display: none !important;
+          }
+          .print-area .flex > div:last-child:has(button) {
+            display: none !important;
+          }
+
+          /* Ensure images print properly */
+          .print-area img {
+            max-width: 100% !important;
+            page-break-inside: avoid;
+          }
+        }
+      `}</style>
     </div>
   );
 }

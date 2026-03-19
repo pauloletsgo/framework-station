@@ -1,6 +1,5 @@
 import {
   Grid3X3,
-  Shield,
   Swords,
   PieChart,
   Target,
@@ -8,6 +7,7 @@ import {
   LayoutDashboard,
   Trophy,
 } from "lucide-react";
+import { SwotIcon } from "@/components/icons/swot-icon";
 import type { FrameworkInfo } from "@/types/frameworks";
 
 export const frameworks: FrameworkInfo[] = [
@@ -16,7 +16,7 @@ export const frameworks: FrameworkInfo[] = [
     name: "Matriz SWOT",
     description:
       "Análise Forças, Fraquezas, Oportunidades e Ameaças do seu negócio ou projeto.",
-    icon: Shield,
+    icon: SwotIcon,
     tags: ["estratégia", "análise", "planejamento"],
     color: "#3B82F6",
   },

@@ -17,7 +17,7 @@ interface SwotCardProps {
   compact?: boolean;
 }
 
-export function SwotCard({ item, cardColor, darkMode, onEdit, onDelete, compact }: SwotCardProps) {
+export function SwotCard({ item, cardColor, darkMode: _darkMode, onEdit, onDelete, compact }: SwotCardProps) {
   const [isEditing, setIsEditing] = useState(false);
   const [editText, setEditText] = useState(item.text);
 

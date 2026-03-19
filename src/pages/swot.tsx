@@ -21,11 +21,11 @@ import {
   Palette,
   Sun,
   Moon,
-  Shield,
   PenLine,
 } from "lucide-react";
 import { Link } from "wouter";
-import { LayoutGrid } from "lucide-react";
+import { SwotIcon } from "@/components/icons/swot-icon";
+import { FrameworkStationIcon } from "@/components/icons/framework-station-icon";
 import { Button } from "@/components/ui/button";
 import { SwotQuadrant } from "@/components/swot/swot-quadrant";
 import { SwotCardPool } from "@/components/swot/swot-card-pool";
@@ -321,9 +321,9 @@ export function SwotPage() {
         <div className="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
           {/* Left: Page identity */}
           <div className="flex items-center gap-2">
-            <Shield className={`w-6 h-6 ${darkMode ? "text-blue-400" : "text-blue-600"}`} />
+            <SwotIcon className={`w-6 h-6 ${darkMode ? "text-blue-400" : "text-blue-600"}`} />
             <span className={`font-bold text-lg hidden sm:inline ${textColor}`}>
-              Análise SWOT
+              Matriz SWOT
             </span>
           </div>
 
@@ -332,7 +332,7 @@ export function SwotPage() {
             href="/"
             className={`flex items-center gap-2 hover:opacity-80 transition-opacity ${textColor}`}
           >
-            <LayoutGrid className={`h-5 w-5 ${darkMode ? "text-red-400" : "text-red-500"}`} />
+            <FrameworkStationIcon className={`h-5 w-5 ${darkMode ? "text-red-400" : "text-red-500"}`} />
             <span className="font-semibold text-base hidden sm:inline">Framework Station</span>
           </Link>
 

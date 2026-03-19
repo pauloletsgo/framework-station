@@ -1,5 +1,5 @@
 import { useState, useMemo } from "react";
-import { LayoutGrid } from "lucide-react";
+import { FrameworkStationIcon } from "@/components/icons/framework-station-icon";
 import { PageLayout } from "@/components/layout/page-layout";
 import { FrameworkCard } from "@/components/shared/framework-card";
 import { SearchFilterBar } from "@/components/shared/search-filter-bar";
@@ -26,7 +26,7 @@ export function HomePage() {
         <div className="max-w-3xl mx-auto space-y-6">
           <div className="flex justify-center">
             <div className="w-16 h-16 rounded-2xl bg-primary/10 flex items-center justify-center">
-              <LayoutGrid className="h-8 w-8 text-primary" />
+              <FrameworkStationIcon className="h-8 w-8 text-red-400" />
             </div>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">

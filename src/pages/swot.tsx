@@ -653,20 +653,37 @@ export function SwotPage() {
       {/* ─── Print Styles ────────────────────────── */}
       <style>{`
         @media print {
+          /* Force browser to print background colors and images */
+          * {
+            print-color-adjust: exact !important;
+            -webkit-print-color-adjust: exact !important;
+            color-adjust: exact !important;
+          }
+
           body * {
             visibility: hidden;
           }
+
           .print-area, .print-area * {
             visibility: visible !important;
           }
+
           .print-area {
             position: absolute;
             left: 0;
             top: 0;
             width: 100%;
           }
-          header, footer, button, input {
+
+          /* Hide non-printable elements */
+          header, footer, button, input, nav {
             display: none !important;
+          }
+
+          /* Ensure cards print properly */
+          .print-area img {
+            max-width: 100% !important;
+            page-break-inside: avoid;
           }
         }
       `}</style>

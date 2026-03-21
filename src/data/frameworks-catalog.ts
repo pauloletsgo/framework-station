@@ -1,12 +1,12 @@
 import {
   Swords,
-  PieChart,
   Target,
   CircleDot,
   LayoutDashboard,
 } from "lucide-react";
 import { SwotIcon } from "@/components/icons/swot-icon";
 import { AnsoffIcon } from "@/components/icons/ansoff-icon";
+import { BcgIcon } from "@/components/icons/bcg-icon";
 import { TrophyIcon } from "@/components/icons/trophy-icon";
 import type { FrameworkInfo } from "@/types/frameworks";
 
@@ -34,7 +34,7 @@ export const frameworks: FrameworkInfo[] = [
     name: "Matriz BCG",
     description:
       "Classifique seus produtos em Estrelas, Vacas Leiteiras, Interrogações e Abacaxis.",
-    icon: PieChart,
+    icon: BcgIcon,
     tags: ["portfólio", "produto", "investimento"],
     color: "#F59E0B",
   },

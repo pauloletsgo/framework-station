@@ -1,5 +1,4 @@
 import {
-  Grid3X3,
   Swords,
   PieChart,
   Target,
@@ -7,6 +6,7 @@ import {
   LayoutDashboard,
 } from "lucide-react";
 import { SwotIcon } from "@/components/icons/swot-icon";
+import { AnsoffIcon } from "@/components/icons/ansoff-icon";
 import { TrophyIcon } from "@/components/icons/trophy-icon";
 import type { FrameworkInfo } from "@/types/frameworks";
 
@@ -25,7 +25,7 @@ export const frameworks: FrameworkInfo[] = [
     name: "Matriz de Ansoff",
     description:
       "Planeje estratégias de crescimento cruzando produtos e mercados existentes e novos.",
-    icon: Grid3X3,
+    icon: AnsoffIcon,
     tags: ["crescimento", "estratégia", "mercado"],
     color: "#8B5CF6",
   },

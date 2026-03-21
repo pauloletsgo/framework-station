@@ -38,7 +38,7 @@ export function SwotQuadrant({
       className="relative flex flex-col border transition-colors overflow-hidden"
       style={{
         backgroundColor: isOver ? hoverBg : baseBg,
-        borderColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+        borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
         minHeight: "200px",
       }}
     >
@@ -47,7 +47,7 @@ export function SwotQuadrant({
         className="text-center py-2 px-3 font-semibold text-sm border-b"
         style={{
           color: darkMode ? "#e2e8f0" : "#1e293b",
-          borderColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+          borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
           backgroundColor: darkMode ? "rgba(0,0,0,0.3)" : "rgba(0,0,0,0.05)",
         }}
       >

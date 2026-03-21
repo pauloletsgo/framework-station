@@ -359,13 +359,22 @@ export function SwotPage() {
             onDragEnd={handleDragEnd}
           >
             {/* ─── SWOT Matrix ───────────────────── */}
-            <div ref={matrixRef} className="rounded-lg overflow-hidden print-area">
+            <div
+              ref={matrixRef}
+              className="rounded-lg overflow-hidden print-area border"
+              style={{
+                borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
+              }}
+            >
               {/* Column Headers */}
               <div className="grid grid-cols-[auto_1fr_1fr]">
                 {/* Empty corner */}
                 <div
-                  className="w-10 md:w-12"
-                  style={{ backgroundColor: darkMode ? "#0a0a14" : "#e5e5e5" }}
+                  className="w-10 md:w-12 border-b"
+                  style={{
+                    backgroundColor: darkMode ? "#0a0a14" : "#e5e5e5",
+                    borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
+                  }}
                 />
                 {/* Positive header */}
                 <div
@@ -373,7 +382,7 @@ export function SwotPage() {
                   style={{
                     backgroundColor: darkMode ? "#0a0a14" : "#e5e5e5",
                     color: darkMode ? "#94a3b8" : "#475569",
-                    borderColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+                    borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
                   }}
                 >
                   Fatores Positivos
@@ -384,7 +393,7 @@ export function SwotPage() {
                   style={{
                     backgroundColor: darkMode ? "#0a0a14" : "#e5e5e5",
                     color: darkMode ? "#94a3b8" : "#475569",
-                    borderColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+                    borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
                   }}
                 >
                   Fatores Negativos
@@ -395,10 +404,10 @@ export function SwotPage() {
               <div className="grid grid-cols-[auto_1fr_1fr]">
                 {/* Vertical Label: Fatores Internos */}
                 <div
-                  className="w-10 md:w-12 flex items-center justify-center border-r"
+                  className="w-10 md:w-12 flex items-center justify-center border-r border-b"
                   style={{
                     backgroundColor: darkMode ? "#0a0a14" : "#e5e5e5",
-                    borderColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+                    borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
                   }}
                 >
                   <span
@@ -445,7 +454,7 @@ export function SwotPage() {
                   className="w-10 md:w-12 flex items-center justify-center border-r"
                   style={{
                     backgroundColor: darkMode ? "#0a0a14" : "#e5e5e5",
-                    borderColor: darkMode ? "rgba(255,255,255,0.1)" : "rgba(0,0,0,0.1)",
+                    borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
                   }}
                 >
                   <span
@@ -497,11 +506,11 @@ export function SwotPage() {
                     if (e.key === "Enter") handleAddNote();
                   }}
                   placeholder="Escreva o texto aqui e clique em adicionar"
-                  className={`flex-1 ${inputBg} ${inputText} border ${inputBorder} rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-blue-500/30 transition-all`}
+                  className={`flex-1 ${inputBg} ${inputText} border ${inputBorder} rounded-lg px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-violet-500/30 transition-all`}
                 />
                 <Button
                   onClick={handleAddNote}
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-5 py-3 h-auto"
+                  className="bg-violet-600 hover:bg-violet-700 text-white px-5 py-3 h-auto"
                 >
                   <PenLine className="w-4 h-4 mr-2" />
                   Adicionar Nota
@@ -510,7 +519,11 @@ export function SwotPage() {
 
               {/* Action Buttons */}
               <div className="mt-4 flex flex-wrap items-center justify-center gap-3">
-                <Button variant="outline" onClick={handleDownload} className={btnBg}>
+                <Button
+                  variant="outline"
+                  onClick={handleDownload}
+                  className="bg-violet-600 hover:bg-violet-700 text-white border-violet-600"
+                >
                   <Download className="w-4 h-4 mr-2" />
                   Download
                 </Button>

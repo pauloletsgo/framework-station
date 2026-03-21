@@ -507,7 +507,7 @@ export function TierListTool() {
             <div className="flex flex-wrap items-center gap-3">
               <label
                 data-testid="button-upload-images"
-                className={`inline-flex items-center gap-2 cursor-pointer ${inputBg} hover:opacity-80 transition-colors ${textColor} px-4 py-2 rounded-md text-sm font-medium border ${inputBorder}`}
+                className="inline-flex items-center gap-2 cursor-pointer bg-violet-600 hover:bg-violet-700 transition-colors text-white px-4 py-2 rounded-md text-sm font-medium"
               >
                 <input
                   type="file"
@@ -519,8 +519,7 @@ export function TierListTool() {
                 />
                 Escolher arquivos
               </label>
-            </div>
-            <div className="flex items-center gap-2">
+              <span className={`text-sm ${textMuted}`}>ou</span>
               <input
                 data-testid="input-url"
                 type="text"
@@ -530,13 +529,13 @@ export function TierListTool() {
                   if (e.key === "Enter") handleAddUrl();
                 }}
                 placeholder="Cole a URL de uma imagem (https://...)"
-                className={`flex-1 max-w-lg ${inputBg} ${inputText} border ${inputBorder} rounded-md px-3 py-2 text-sm outline-none focus:border-opacity-60 transition-colors`}
+                className={`flex-1 min-w-[200px] ${inputBg} ${inputText} border ${inputBorder} rounded-md px-3 py-2 text-sm outline-none focus:ring-2 focus:ring-violet-500/30 transition-colors`}
               />
               <Button
                 data-testid="button-add-url"
                 variant="outline"
                 onClick={handleAddUrl}
-                className={btnBg}
+                className="bg-violet-600 hover:bg-violet-700 text-white border-violet-600"
               >
                 <Link2 className="w-4 h-4 mr-2" />
                 Adicionar URL
@@ -563,7 +562,7 @@ export function TierListTool() {
             data-testid="button-download"
             variant="outline"
             onClick={handleDownload}
-            className="bg-indigo-600/80 text-white border-indigo-500/50 hover:bg-indigo-700"
+            className="bg-violet-600 hover:bg-violet-700 text-white border-violet-600"
           >
             <Download className="w-4 h-4 mr-2" />
             Download

@@ -79,7 +79,7 @@ export function TierListTool() {
   const tierListRef = useRef<HTMLDivElement>(null);
   const { toast } = useToast();
 
-  const pageBgColor = darkMode ? "#1a1a2e" : "#f0f0f0";
+  const pageBgColor = darkMode ? "#0f0f1a" : "#f5f5f5";
   const textColor = darkMode ? "text-white" : "text-gray-900";
   const textMuted = darkMode ? "text-white/70" : "text-gray-500";
   const textMutedStrong = darkMode ? "text-white/90" : "text-gray-700";

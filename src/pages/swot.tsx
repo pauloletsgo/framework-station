@@ -22,10 +22,9 @@ import {
   Sun,
   Moon,
   PenLine,
-  Mail,
-  Linkedin,
 } from "lucide-react";
 import { Link } from "wouter";
+import { Footer } from "@/components/layout/footer";
 import { SwotIcon } from "@/components/icons/swot-icon";
 import { FrameworkStationIcon } from "@/components/icons/framework-station-icon";
 import { Button } from "@/components/ui/button";
@@ -649,40 +648,7 @@ export function SwotPage() {
       </main>
 
       {/* ─── Footer ──────────────────────────────── */}
-      <footer
-        className="border-t py-6 px-4"
-        style={{
-          borderColor: darkMode ? "rgba(255,255,255,0.08)" : "rgba(0,0,0,0.08)",
-          backgroundColor: darkMode ? "#080812" : "#e8e8e8",
-        }}
-      >
-        <div className="max-w-7xl mx-auto text-center text-sm space-y-3" style={{ color: "#64748b" }}>
-          <p>
-            Framework Station &mdash; Ferramentas interativas de frameworks de negócios, marketing e
-            estratégia.
-          </p>
-          <div className="flex items-center justify-center gap-4">
-            <a
-              href="mailto:pauloregisml@gmail.com"
-              className="inline-flex items-center gap-1.5 hover:brightness-150 transition-all"
-            >
-              <Mail className="w-4 h-4" />
-              Contato
-            </a>
-            <span style={{ opacity: 0.4 }}>|</span>
-            <a
-              href="https://www.linkedin.com/in/paulormoreira/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:brightness-150 transition-all"
-            >
-              <Linkedin className="w-4 h-4" />
-              LinkedIn
-            </a>
-          </div>
-          <p>&copy; {new Date().getFullYear()} frameworkstation.com.br</p>
-        </div>
-      </footer>
+      <Footer />
 
       {/* ─── Print Styles ────────────────────────── */}
       <style>{`

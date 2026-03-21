@@ -22,6 +22,8 @@ import {
   Sun,
   Moon,
   PenLine,
+  Mail,
+  Linkedin,
 } from "lucide-react";
 import { Link } from "wouter";
 import { AnsoffIcon } from "@/components/icons/ansoff-icon";
@@ -701,17 +703,19 @@ export function AnsoffPage() {
           <div className="flex items-center justify-center gap-4">
             <a
               href="mailto:pauloregisml@gmail.com"
-              className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+              className="inline-flex items-center gap-1.5 hover:brightness-150 transition-all"
             >
-              ✉ Contato
+              <Mail className="w-4 h-4" />
+              Contato
             </a>
             <span style={{ opacity: 0.4 }}>|</span>
             <a
               href="https://www.linkedin.com/in/paulormoreira/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+              className="inline-flex items-center gap-1.5 hover:brightness-150 transition-all"
             >
+              <Linkedin className="w-4 h-4" />
               LinkedIn
             </a>
           </div>

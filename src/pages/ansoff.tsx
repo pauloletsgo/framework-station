@@ -693,12 +693,29 @@ export function AnsoffPage() {
           backgroundColor: darkMode ? "#080812" : "#e8e8e8",
         }}
       >
-        <div className="max-w-7xl mx-auto text-center text-sm" style={{ color: darkMode ? "#64748b" : "#64748b" }}>
+        <div className="max-w-7xl mx-auto text-center text-sm space-y-3" style={{ color: "#64748b" }}>
           <p>
             Framework Station &mdash; Ferramentas interativas de frameworks de negócios, marketing e
             estratégia.
           </p>
-          <p className="mt-1">&copy; {new Date().getFullYear()} frameworkstation.com.br</p>
+          <div className="flex items-center justify-center gap-4">
+            <a
+              href="mailto:pauloregisml@gmail.com"
+              className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+            >
+              ✉ Contato
+            </a>
+            <span style={{ opacity: 0.4 }}>|</span>
+            <a
+              href="https://www.linkedin.com/in/paulormoreira/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 hover:opacity-80 transition-opacity"
+            >
+              LinkedIn
+            </a>
+          </div>
+          <p>&copy; {new Date().getFullYear()} frameworkstation.com.br</p>
         </div>
       </footer>
 

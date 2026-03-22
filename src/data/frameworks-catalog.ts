@@ -1,5 +1,4 @@
 import {
-  Swords,
   Target,
   CircleDot,
   LayoutDashboard,
@@ -7,6 +6,7 @@ import {
 import { SwotIcon } from "@/components/icons/swot-icon";
 import { AnsoffIcon } from "@/components/icons/ansoff-icon";
 import { BcgIcon } from "@/components/icons/bcg-icon";
+import { PorterIcon } from "@/components/icons/porter-icon";
 import { TrophyIcon } from "@/components/icons/trophy-icon";
 import type { FrameworkInfo } from "@/types/frameworks";
 
@@ -43,9 +43,9 @@ export const frameworks: FrameworkInfo[] = [
     name: "5 Forças de Porter",
     description:
       "Avalie a competitividade do seu mercado analisando as cinco forças competitivas.",
-    icon: Swords,
+    icon: PorterIcon,
     tags: ["competição", "mercado", "indústria"],
-    color: "#EF4444",
+    color: "#EF31B9",
   },
   {
     slug: "usp",

@@ -1,5 +1,4 @@
 import {
-  Target,
   CircleDot,
   LayoutDashboard,
 } from "lucide-react";
@@ -7,6 +6,7 @@ import { SwotIcon } from "@/components/icons/swot-icon";
 import { AnsoffIcon } from "@/components/icons/ansoff-icon";
 import { BcgIcon } from "@/components/icons/bcg-icon";
 import { PorterIcon } from "@/components/icons/porter-icon";
+import { UspIcon } from "@/components/icons/usp-icon";
 import { TrophyIcon } from "@/components/icons/trophy-icon";
 import type { FrameworkInfo } from "@/types/frameworks";
 
@@ -52,9 +52,9 @@ export const frameworks: FrameworkInfo[] = [
     name: "Unique Selling Proposition",
     description:
       "Defina a proposta única de valor que diferencia seu produto ou serviço.",
-    icon: Target,
+    icon: UspIcon,
     tags: ["marketing", "posicionamento", "diferencial"],
-    color: "#10B981",
+    color: "#58A904",
   },
   {
     slug: "golden-circle",

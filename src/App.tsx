@@ -16,14 +16,14 @@ function App() {
     <>
       <Switch>
         <Route path="/" component={HomePage} />
-        <Route path="/swot" component={SwotPage} />
-        <Route path="/ansoff" component={AnsoffPage} />
-        <Route path="/bcg" component={BcgPage} />
-        <Route path="/porter" component={PorterPage} />
-        <Route path="/usp" component={UspPage} />
-        <Route path="/golden-circle" component={GoldenCirclePage} />
-        <Route path="/business-model-canvas" component={BusinessModelCanvasPage} />
-        <Route path="/tier-creator" component={TierCreatorPage} />
+        <Route path="/swot-framework-template" component={SwotPage} />
+        <Route path="/ansoff-framework-template" component={AnsoffPage} />
+        <Route path="/bcg-framework-template" component={BcgPage} />
+        <Route path="/porter-framework-template" component={PorterPage} />
+        <Route path="/usp-unique-selling-proposition-framework-template" component={UspPage} />
+        <Route path="/golden-circle-framework-template" component={GoldenCirclePage} />
+        <Route path="/business-model-canvas-framework-template" component={BusinessModelCanvasPage} />
+        <Route path="/tier-creator-framework-template" component={TierCreatorPage} />
         <Route component={NotFoundPage} />
       </Switch>
       <Toaster />

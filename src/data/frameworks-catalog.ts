@@ -12,7 +12,7 @@ import type { FrameworkInfo } from "@/types/frameworks";
 
 export const frameworks: FrameworkInfo[] = [
   {
-    slug: "swot",
+    slug: "swot-framework-template",
     name: "Matriz SWOT",
     description:
       "Análise Forças, Fraquezas, Oportunidades e Ameaças do seu negócio ou projeto.",
@@ -21,7 +21,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#3B82F6",
   },
   {
-    slug: "ansoff",
+    slug: "ansoff-framework-template",
     name: "Matriz de Ansoff",
     description:
       "Planeje estratégias de crescimento cruzando produtos e mercados existentes e novos.",
@@ -30,7 +30,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#8B5CF6",
   },
   {
-    slug: "bcg",
+    slug: "bcg-framework-template",
     name: "Matriz BCG",
     description:
       "Classifique seus produtos em Estrelas, Vacas Leiteiras, Interrogações e Abacaxis.",
@@ -39,7 +39,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#F59E0B",
   },
   {
-    slug: "porter",
+    slug: "porter-framework-template",
     name: "5 Forças de Porter",
     description:
       "Avalie a competitividade do seu mercado analisando as cinco forças competitivas.",
@@ -48,7 +48,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#EF31B9",
   },
   {
-    slug: "usp",
+    slug: "usp-unique-selling-proposition-framework-template",
     name: "Unique Selling Proposition",
     description:
       "Defina a proposta única de valor que diferencia seu produto ou serviço.",
@@ -57,7 +57,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#58A904",
   },
   {
-    slug: "golden-circle",
+    slug: "golden-circle-framework-template",
     name: "Golden Circle",
     description:
       "Descubra o propósito do seu negócio com o modelo Por Que, Como e O Que.",
@@ -66,7 +66,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#F97316",
   },
   {
-    slug: "business-model-canvas",
+    slug: "business-model-canvas-framework-template",
     name: "Business Model Canvas",
     description:
       "Visualize e planeje todos os elementos do seu modelo de negócios em um único canvas.",
@@ -75,7 +75,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#06B6D4",
   },
   {
-    slug: "tier-creator",
+    slug: "tier-creator-framework-template",
     name: "Tier Creator",
     description:
       "Crie listas de classificação (tier lists) arrastando e organizando itens por níveis.",

@@ -1,12 +1,10 @@
-import {
-  LayoutDashboard,
-} from "lucide-react";
 import { SwotIcon } from "@/components/icons/swot-icon";
 import { AnsoffIcon } from "@/components/icons/ansoff-icon";
 import { BcgIcon } from "@/components/icons/bcg-icon";
 import { PorterIcon } from "@/components/icons/porter-icon";
 import { UspIcon } from "@/components/icons/usp-icon";
 import { GoldenCircleIcon } from "@/components/icons/golden-circle-icon";
+import { BmcIcon } from "@/components/icons/bmc-icon";
 import { TrophyIcon } from "@/components/icons/trophy-icon";
 import type { FrameworkInfo } from "@/types/frameworks";
 
@@ -70,9 +68,9 @@ export const frameworks: FrameworkInfo[] = [
     name: "Business Model Canvas",
     description:
       "Visualize e planeje todos os elementos do seu modelo de negócios em um único canvas.",
-    icon: LayoutDashboard,
+    icon: BmcIcon,
     tags: ["modelo de negócios", "startup", "planejamento"],
-    color: "#06B6D4",
+    color: "#84FC06",
   },
   {
     slug: "tier-creator-framework-template",

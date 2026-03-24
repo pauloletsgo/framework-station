@@ -5,7 +5,7 @@ import { SwotCard, type SwotCardItem } from "./swot-card";
 interface SwotQuadrantProps {
   id: string;
   label: string;
-  sublabel: string;
+  sublabel?: string;
   watermark: string;
   watermarkColor: string;
   items: SwotCardItem[];
@@ -13,6 +13,8 @@ interface SwotQuadrantProps {
   darkMode: boolean;
   onEditCard: (id: string, text: string) => void;
   onDeleteCard: (id: string) => void;
+  headerColor?: string;
+  minHeight?: string;
 }
 
 export function SwotQuadrant({
@@ -26,6 +28,8 @@ export function SwotQuadrant({
   darkMode,
   onEditCard,
   onDeleteCard,
+  headerColor,
+  minHeight = "200px",
 }: SwotQuadrantProps) {
   const { setNodeRef, isOver } = useDroppable({ id });
 
@@ -35,24 +39,24 @@ export function SwotQuadrant({
   return (
     <div
       ref={setNodeRef}
-      className="relative flex flex-col border transition-colors overflow-hidden"
+      className="relative flex flex-col flex-1 border transition-colors overflow-hidden"
       style={{
         backgroundColor: isOver ? hoverBg : baseBg,
         borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
-        minHeight: "200px",
+        minHeight,
       }}
     >
       {/* Header */}
       <div
         className="text-center py-2 px-3 font-semibold text-sm border-b"
         style={{
-          color: darkMode ? "#e2e8f0" : "#1e293b",
+          color: headerColor ? "#000000" : darkMode ? "#e2e8f0" : "#1e293b",
           borderColor: darkMode ? "rgba(255,255,255,0.15)" : "rgba(0,0,0,0.15)",
-          backgroundColor: darkMode ? "rgba(0,0,0,0.3)" : "rgba(0,0,0,0.05)",
+          backgroundColor: headerColor || (darkMode ? "rgba(0,0,0,0.3)" : "rgba(0,0,0,0.05)"),
         }}
       >
         {label}
-        <span className="block text-xs font-normal opacity-60">{sublabel}</span>
+        {sublabel && <span className="block text-xs font-normal opacity-60">{sublabel}</span>}
       </div>
 
       {/* Watermark letter */}

@@ -1,5 +1,4 @@
 import {
-  CircleDot,
   LayoutDashboard,
 } from "lucide-react";
 import { SwotIcon } from "@/components/icons/swot-icon";
@@ -7,6 +6,7 @@ import { AnsoffIcon } from "@/components/icons/ansoff-icon";
 import { BcgIcon } from "@/components/icons/bcg-icon";
 import { PorterIcon } from "@/components/icons/porter-icon";
 import { UspIcon } from "@/components/icons/usp-icon";
+import { GoldenCircleIcon } from "@/components/icons/golden-circle-icon";
 import { TrophyIcon } from "@/components/icons/trophy-icon";
 import type { FrameworkInfo } from "@/types/frameworks";
 
@@ -61,9 +61,9 @@ export const frameworks: FrameworkInfo[] = [
     name: "Golden Circle",
     description:
       "Descubra o propósito do seu negócio com o modelo Por Que, Como e O Que.",
-    icon: CircleDot,
+    icon: GoldenCircleIcon,
     tags: ["propósito", "liderança", "comunicação"],
-    color: "#F97316",
+    color: "#FFC800",
   },
   {
     slug: "business-model-canvas-framework-template",

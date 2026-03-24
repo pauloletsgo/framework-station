@@ -70,7 +70,7 @@ export function TierListTool() {
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [tiers, setTiers] = useState<Tier[]>(DEFAULT_TIERS);
   const [poolItems, setPoolItems] = useState<TierItem[]>([]);
-  const [rowBgColor, setRowBgColor] = useState("#1e1e1e");
+  const [rowBgColor, setRowBgColor] = useState("#1e293b");
   const [darkMode, setDarkMode] = useState(true);
   const [showRowBgPicker, setShowRowBgPicker] = useState(false);
   const [settingsForTier, setSettingsForTier] = useState<string | null>(null);

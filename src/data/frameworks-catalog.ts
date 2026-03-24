@@ -12,7 +12,7 @@ import type { FrameworkInfo } from "@/types/frameworks";
 
 export const frameworks: FrameworkInfo[] = [
   {
-    slug: "swot-framework-template",
+    slug: "matriz-swot-framework-template",
     name: "Matriz SWOT",
     description:
       "Análise Forças, Fraquezas, Oportunidades e Ameaças do seu negócio ou projeto.",
@@ -21,7 +21,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#3B82F6",
   },
   {
-    slug: "ansoff-framework-template",
+    slug: "matriz-de-ansoff-framework-template",
     name: "Matriz de Ansoff",
     description:
       "Planeje estratégias de crescimento cruzando produtos e mercados existentes e novos.",
@@ -30,7 +30,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#8B5CF6",
   },
   {
-    slug: "bcg-framework-template",
+    slug: "matriz-bcg-framework-template",
     name: "Matriz BCG",
     description:
       "Classifique seus produtos em Estrelas, Vacas Leiteiras, Interrogações e Abacaxis.",
@@ -39,7 +39,7 @@ export const frameworks: FrameworkInfo[] = [
     color: "#F59E0B",
   },
   {
-    slug: "porter-framework-template",
+    slug: "5-forcas-de-porter-framework-template",
     name: "5 Forças de Porter",
     description:
       "Avalie a competitividade do seu mercado analisando as cinco forças competitivas.",

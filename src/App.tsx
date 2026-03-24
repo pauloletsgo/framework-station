@@ -16,10 +16,10 @@ function App() {
     <>
       <Switch>
         <Route path="/" component={HomePage} />
-        <Route path="/swot-framework-template" component={SwotPage} />
-        <Route path="/ansoff-framework-template" component={AnsoffPage} />
-        <Route path="/bcg-framework-template" component={BcgPage} />
-        <Route path="/porter-framework-template" component={PorterPage} />
+        <Route path="/matriz-swot-framework-template" component={SwotPage} />
+        <Route path="/matriz-de-ansoff-framework-template" component={AnsoffPage} />
+        <Route path="/matriz-bcg-framework-template" component={BcgPage} />
+        <Route path="/5-forcas-de-porter-framework-template" component={PorterPage} />
         <Route path="/usp-unique-selling-proposition-framework-template" component={UspPage} />
         <Route path="/golden-circle-framework-template" component={GoldenCirclePage} />
         <Route path="/business-model-canvas-framework-template" component={BusinessModelCanvasPage} />

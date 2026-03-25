@@ -1,9 +1,19 @@
 import { useState } from "react";
 import { Mail, Linkedin, Heart, Copy, Check } from "lucide-react";
 
-export function Footer() {
+interface FooterProps {
+  darkMode?: boolean;
+}
+
+export function Footer({ darkMode = true }: FooterProps) {
   const [copied, setCopied] = useState(false);
   const email = "contato.frameworkstation@gmail.com";
+
+  const textColor = darkMode ? "#9ca3af" : "#4b5563";
+  const headingColor = darkMode ? "#f3f4f6" : "#111827";
+  const hoverColor = darkMode ? "#f3f4f6" : "#111827";
+  const borderColor = darkMode ? "rgba(156,163,175,0.3)" : "rgba(75,85,99,0.3)";
+  const borderHoverColor = darkMode ? "rgba(156,163,175,0.6)" : "rgba(75,85,99,0.6)";
 
   const handleCopy = async () => {
     try {
@@ -24,8 +34,14 @@ export function Footer() {
   };
 
   return (
-    <footer className="border-t mt-auto py-8 px-4">
-      <div className="max-w-4xl mx-auto text-sm text-muted-foreground space-y-6">
+    <footer
+      className="border-t mt-auto py-8 px-4"
+      style={{
+        color: textColor,
+        borderColor: borderColor,
+      }}
+    >
+      <div className="max-w-4xl mx-auto text-sm space-y-6">
         {/* Descrição */}
         <p className="text-center">
           Framework Station &mdash; Ferramentas interativas de frameworks de negócios, marketing e estratégia.
@@ -35,13 +51,15 @@ export function Footer() {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8">
           {/* Contato */}
           <div className="space-y-2 text-center flex flex-col items-center">
-            <p className="font-semibold text-foreground">
+            <p className="font-semibold" style={{ color: headingColor }}>
               Dúvidas ou Sugestões
             </p>
             <div className="space-y-1">
               <a
                 href={`mailto:${email}`}
-                className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-1.5 transition-colors"
+                onMouseEnter={(e) => e.currentTarget.style.color = hoverColor}
+                onMouseLeave={(e) => e.currentTarget.style.color = textColor}
               >
                 <Mail className="w-4 h-4" />
                 {email}
@@ -51,7 +69,9 @@ export function Footer() {
                 href="https://www.linkedin.com/in/paulormoreira/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-1.5 hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-1.5 transition-colors"
+                onMouseEnter={(e) => e.currentTarget.style.color = hoverColor}
+                onMouseLeave={(e) => e.currentTarget.style.color = textColor}
               >
                 <Linkedin className="w-4 h-4" />
                 LinkedIn
@@ -61,7 +81,7 @@ export function Footer() {
 
           {/* Apoie */}
           <div className="space-y-2 text-center flex flex-col items-center">
-            <p className="font-semibold text-foreground inline-flex items-center gap-1.5">
+            <p className="font-semibold inline-flex items-center gap-1.5" style={{ color: headingColor }}>
               <Heart className="w-4 h-4 text-pink-500" />
               Apoie este projeto
             </p>
@@ -70,7 +90,10 @@ export function Footer() {
             </p>
             <button
               onClick={handleCopy}
-              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border border-muted-foreground/30 hover:border-muted-foreground/60 hover:text-foreground transition-colors text-xs"
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-md border transition-colors text-xs"
+              style={{ borderColor: borderColor }}
+              onMouseEnter={(e) => { e.currentTarget.style.borderColor = borderHoverColor; e.currentTarget.style.color = hoverColor; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = borderColor; e.currentTarget.style.color = textColor; }}
             >
               {copied ? (
                 <Check className="w-3.5 h-3.5 text-green-500" />
@@ -78,7 +101,7 @@ export function Footer() {
                 <Copy className="w-3.5 h-3.5" />
               )}
               {email}
-              <span className="text-muted-foreground/60">
+              <span style={{ opacity: 0.6 }}>
                 {copied ? "copiado!" : "copiar"}
               </span>
             </button>

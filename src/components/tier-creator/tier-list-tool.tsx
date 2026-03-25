@@ -665,7 +665,7 @@ export function TierListTool() {
       </main>
 
       {/* ─── Footer ──────────────────────────────── */}
-      <Footer />
+      <Footer darkMode={darkMode} />
 
       {/* ─── Print Styles ────────────────────────── */}
       <style>{`

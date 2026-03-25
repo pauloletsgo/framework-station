@@ -695,7 +695,7 @@ export function BcgPage() {
       </main>
 
       {/* ─── Footer ──────────────────────────────── */}
-      <Footer />
+      <Footer darkMode={darkMode} />
 
       {/* ─── Print Styles ────────────────────────── */}
       <style>{`

@@ -347,7 +347,7 @@ export function GoldenCirclePage() {
       </main>
 
       {/* ─── Footer ──────────────────────────────── */}
-      <Footer />
+      <Footer darkMode={darkMode} />
 
       {/* ─── Print Styles ────────────────────────── */}
       <style>{`

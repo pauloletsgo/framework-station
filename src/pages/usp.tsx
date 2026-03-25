@@ -511,7 +511,7 @@ export function UspPage() {
       </main>
 
       {/* ─── Footer ──────────────────────────────── */}
-      <Footer />
+      <Footer darkMode={darkMode} />
 
       {/* ─── Print Styles ────────────────────────── */}
       <style>{`

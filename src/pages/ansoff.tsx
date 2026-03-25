@@ -695,7 +695,7 @@ export function AnsoffPage() {
       </main>
 
       {/* ─── Footer ──────────────────────────────── */}
-      <Footer />
+      <Footer darkMode={darkMode} />
 
       {/* ─── Print Styles ────────────────────────── */}
       <style>{`

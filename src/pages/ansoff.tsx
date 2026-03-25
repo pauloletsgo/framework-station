@@ -274,16 +274,12 @@ export function AnsoffPage() {
               item.style.transition = "none";
             }
           );
-          // Fix vertical text mirroring: replace with stacked characters
+          // Fix vertical text for html2canvas: use rotate instead of writingMode
           clonedEl.querySelectorAll<HTMLElement>("[data-vertical-text]").forEach((el) => {
-            const text = el.textContent || "";
             el.style.writingMode = "initial";
-            el.style.transform = "none";
-            el.style.fontSize = "10px";
-            el.style.lineHeight = "1.3";
-            el.style.letterSpacing = "2px";
-            el.style.textAlign = "center";
-            el.innerHTML = text.split("").join("<br>");
+            el.style.transform = "rotate(-90deg)";
+            el.style.whiteSpace = "nowrap";
+            el.style.display = "block";
           });
         },
       });

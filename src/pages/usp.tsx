@@ -6,6 +6,7 @@ import { UspIcon } from "@/components/icons/usp-icon";
 import { FrameworkStationIcon } from "@/components/icons/framework-station-icon";
 import { Button } from "@/components/ui/button";
 import { ColorPickerPopover } from "@/components/shared/color-picker-popover";
+import { SeoContentSection } from "@/components/shared/seo-content-section";
 import { SeoFrameworksSection } from "@/components/shared/seo-frameworks-section";
 import html2canvas from "html2canvas";
 
@@ -210,7 +211,7 @@ export function UspPage() {
             <FrameworkStationIcon className={`h-5 w-5 ${darkMode ? "text-red-400" : "text-red-500"}`} />
             <span className="font-semibold text-base hidden sm:inline">Framework Station</span>
           </Link>
-          <Button variant="outline" size="icon" onClick={() => setDarkMode(!darkMode)} className={btnBg}>
+          <Button variant="outline" size="icon" onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </Button>
         </div>
@@ -474,48 +475,37 @@ export function UspPage() {
             color: darkMode ? "#cbd5e1" : "#334155",
           }}
         >
-          <section className="max-w-3xl mx-auto px-4 py-12 sm:py-16">
-            <h2 className="text-2xl font-bold mb-6" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-              O que é Unique Selling Proposition (USP)?
-            </h2>
-            <div className="space-y-4 text-sm sm:text-base leading-relaxed">
-              <p>
-                A Unique Selling Proposition (USP), ou Proposta Única de Valor, é o fator ou benefício
-                que torna um produto ou serviço diferente e melhor que os concorrentes. É a razão principal
-                pela qual um cliente deve escolher sua oferta em vez das alternativas.
-              </p>
+          <SeoContentSection title="O que é Unique Selling Proposition (USP)?">
+            <p>
+              A Unique Selling Proposition (USP), ou Proposta Única de Valor, é o fator ou benefício
+              que torna um produto ou serviço diferente e melhor que os concorrentes. É a razão principal
+              pela qual um cliente deve escolher sua oferta em vez das alternativas.
+            </p>
 
-              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-                Origem e História
-              </h3>
-              <p>
-                O conceito de USP foi desenvolvido por Rosser Reeves, publicitário americano e presidente
-                da agência Ted Bates & Company, na década de 1940. Reeves formalizou a ideia em seu livro
-                "Reality in Advertising" (1961), onde argumentou que cada anúncio deve fazer uma proposição
-                específica ao consumidor: "Compre este produto e você terá este benefício específico."
-              </p>
+            <h3>Origem e História</h3>
+            <p>
+              O conceito de USP foi desenvolvido por Rosser Reeves, publicitário americano e presidente
+              da agência Ted Bates & Company, na década de 1940. Reeves formalizou a ideia em seu livro
+              "Reality in Advertising" (1961), onde argumentou que cada anúncio deve fazer uma proposição
+              específica ao consumidor: "Compre este produto e você terá este benefício específico."
+            </p>
 
-              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-                Os Três Princípios da USP
-              </h3>
-              <ol className="list-decimal pl-5 space-y-1">
-                <li>Cada anúncio deve fazer uma proposição ao consumidor — não apenas palavras, não apenas exagero, mas um benefício concreto.</li>
-                <li>A proposição deve ser única — algo que a concorrência não oferece ou não pode oferecer.</li>
-                <li>A proposição deve ser forte o suficiente para mover milhões — atrair novos clientes.</li>
-              </ol>
+            <h3>Os Três Princípios da USP</h3>
+            <ol>
+              <li>Cada anúncio deve fazer uma proposição ao consumidor — não apenas palavras, não apenas exagero, mas um benefício concreto.</li>
+              <li>A proposição deve ser única — algo que a concorrência não oferece ou não pode oferecer.</li>
+              <li>A proposição deve ser forte o suficiente para mover milhões — atrair novos clientes.</li>
+            </ol>
 
-              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-                Quando Usar
-              </h3>
-              <p>
-                Use o framework USP ao lançar um novo produto, reposicionar uma marca, criar campanhas
-                de marketing, ou quando precisar comunicar claramente por que os clientes devem escolher você.
-              </p>
-              <p className="text-xs mt-6 opacity-70">
-                Fonte: Reeves, Rosser (1961). Reality in Advertising. Alfred A. Knopf.
-              </p>
-            </div>
-          </section>
+            <h3>Quando Usar</h3>
+            <p>
+              Use o framework USP ao lançar um novo produto, reposicionar uma marca, criar campanhas
+              de marketing, ou quando precisar comunicar claramente por que os clientes devem escolher você.
+            </p>
+            <p className="text-xs mt-6 opacity-70">
+              Fonte: Reeves, Rosser (1961). Reality in Advertising. Alfred A. Knopf.
+            </p>
+          </SeoContentSection>
           <SeoFrameworksSection currentSlug="usp-unique-selling-proposition-framework-template" />
         </div>
       </main>

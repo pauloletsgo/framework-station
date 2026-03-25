@@ -413,7 +413,6 @@ export function BusinessModelCanvasPage() {
             variant="outline"
             size="icon"
             onClick={() => setDarkMode(!darkMode)}
-            className={btnBg}
           >
             {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </Button>

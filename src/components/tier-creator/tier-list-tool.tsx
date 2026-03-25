@@ -24,6 +24,7 @@ import { TierRow } from "@/components/tier-creator/tier-row";
 import { ImagePool } from "@/components/tier-creator/image-pool";
 import { TierSettingsDialog } from "@/components/tier-creator/tier-settings-dialog";
 import { ColorPickerPopover } from "@/components/shared/color-picker-popover";
+import { SeoContentSection } from "@/components/shared/seo-content-section";
 import { SeoFrameworksSection } from "@/components/shared/seo-frameworks-section";
 import { useToast } from "@/hooks/use-toast";
 import html2canvas from "html2canvas";
@@ -436,7 +437,6 @@ export function TierListTool() {
             variant="outline"
             size="icon"
             onClick={() => setDarkMode(!darkMode)}
-            className={btnBg}
           >
             {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </Button>
@@ -639,36 +639,27 @@ export function TierListTool() {
             color: darkMode ? "#cbd5e1" : "#334155",
           }}
         >
-          <section className="max-w-3xl mx-auto px-4 py-12 sm:py-16">
-            <h2 className="text-2xl font-bold mb-6" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-              O que é o Tier Creator?
-            </h2>
-            <div className="space-y-4 text-sm sm:text-base leading-relaxed">
-              <p>
-                O Tier Creator (criador de tiers ou classificações) é uma ferramenta que permite
-                organizar itens — como produtos, personagens, opções ou qualquer coisa — em níveis
-                hierárquicos, geralmente de S (melhor) a D ou F (pior).
-              </p>
+          <SeoContentSection title="O que é o Tier Creator?">
+            <p>
+              O Tier Creator (criador de tiers ou classificações) é uma ferramenta que permite
+              organizar itens — como produtos, personagens, opções ou qualquer coisa — em níveis
+              hierárquicos, geralmente de S (melhor) a D ou F (pior).
+            </p>
 
-              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-                Como Funciona
-              </h3>
-              <ul className="list-disc pl-5 space-y-1">
-                <li>Adicione imagens dos itens que deseja classificar (via upload ou URL)</li>
-                <li>Arraste e solte cada item no nível desejado (S, A, B, C, D)</li>
-                <li>Personalize cores, labels e quantidade de níveis</li>
-                <li>Exporte sua tier list como imagem PNG para compartilhar</li>
-              </ul>
+            <h3>Como Funciona</h3>
+            <ul>
+              <li>Adicione imagens dos itens que deseja classificar (via upload ou URL)</li>
+              <li>Arraste e solte cada item no nível desejado (S, A, B, C, D)</li>
+              <li>Personalize cores, labels e quantidade de níveis</li>
+              <li>Exporte sua tier list como imagem PNG para compartilhar</li>
+            </ul>
 
-              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-                Quando Usar
-              </h3>
-              <p>
-                Tier lists são populares para comparar e classificar qualquer tipo de item de forma
-                visual e intuitiva — desde produtos e serviços até ideias e prioridades de projeto.
-              </p>
-            </div>
-          </section>
+            <h3>Quando Usar</h3>
+            <p>
+              Tier lists são populares para comparar e classificar qualquer tipo de item de forma
+              visual e intuitiva — desde produtos e serviços até ideias e prioridades de projeto.
+            </p>
+          </SeoContentSection>
           <SeoFrameworksSection currentSlug="tier-creator-framework-template" />
         </div>
       </main>

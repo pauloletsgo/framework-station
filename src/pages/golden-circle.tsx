@@ -6,6 +6,7 @@ import { GoldenCircleIcon } from "@/components/icons/golden-circle-icon";
 import { FrameworkStationIcon } from "@/components/icons/framework-station-icon";
 import { Button } from "@/components/ui/button";
 import { ColorPickerPopover } from "@/components/shared/color-picker-popover";
+import { SeoContentSection } from "@/components/shared/seo-content-section";
 import { SeoFrameworksSection } from "@/components/shared/seo-frameworks-section";
 import html2canvas from "html2canvas";
 
@@ -155,7 +156,7 @@ export function GoldenCirclePage() {
             <FrameworkStationIcon className={`h-5 w-5 ${darkMode ? "text-red-400" : "text-red-500"}`} />
             <span className="font-semibold text-base hidden sm:inline">Framework Station</span>
           </Link>
-          <Button variant="outline" size="icon" onClick={() => setDarkMode(!darkMode)} className={btnBg}>
+          <Button variant="outline" size="icon" onClick={() => setDarkMode(!darkMode)}>
             {darkMode ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />}
           </Button>
         </div>
@@ -306,52 +307,41 @@ export function GoldenCirclePage() {
             color: darkMode ? "#cbd5e1" : "#334155",
           }}
         >
-          <section className="max-w-3xl mx-auto px-4 py-12 sm:py-16">
-            <h2 className="text-2xl font-bold mb-6" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-              O que é o Golden Circle?
-            </h2>
-            <div className="space-y-4 text-sm sm:text-base leading-relaxed">
-              <p>
-                O Golden Circle (Círculo Dourado) é um modelo de liderança e comunicação que propõe que
-                organizações e líderes inspiradores pensam, agem e se comunicam de dentro para fora —
-                começando pelo "Por Que" (propósito), passando pelo "Como" (processo) e terminando no
-                "O Que" (produto).
-              </p>
+          <SeoContentSection title="O que é o Golden Circle?">
+            <p>
+              O Golden Circle (Círculo Dourado) é um modelo de liderança e comunicação que propõe que
+              organizações e líderes inspiradores pensam, agem e se comunicam de dentro para fora —
+              começando pelo "Por Que" (propósito), passando pelo "Como" (processo) e terminando no
+              "O Que" (produto).
+            </p>
 
-              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-                Origem e História
-              </h3>
-              <p>
-                O conceito foi criado por Simon Sinek, autor e palestrante britânico-americano, e
-                apresentado ao mundo em sua palestra TED "How Great Leaders Inspire Action" em setembro
-                de 2009, que se tornou uma das palestras TED mais assistidas de todos os tempos. Sinek
-                aprofundou o conceito em seu livro "Start with Why: How Great Leaders Inspire Everyone
-                to Take Action" (2009).
-              </p>
+            <h3>Origem e História</h3>
+            <p>
+              O conceito foi criado por Simon Sinek, autor e palestrante britânico-americano, e
+              apresentado ao mundo em sua palestra TED "How Great Leaders Inspire Action" em setembro
+              de 2009, que se tornou uma das palestras TED mais assistidas de todos os tempos. Sinek
+              aprofundou o conceito em seu livro "Start with Why: How Great Leaders Inspire Everyone
+              to Take Action" (2009).
+            </p>
 
-              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-                Os Três Níveis
-              </h3>
-              <ul className="list-disc pl-5 space-y-1">
-                <li><strong>Por Que (Why):</strong> O propósito, a causa, a crença. Por que a organização existe? Por que você faz o que faz? Poucos sabem articular isso claramente.</li>
-                <li><strong>Como (How):</strong> O processo, os valores, a proposta diferenciada. Como você realiza o seu propósito? É o que torna a abordagem única.</li>
-                <li><strong>O Que (What):</strong> Os produtos, serviços e resultados tangíveis. Toda organização sabe O QUE faz. É o nível mais externo e óbvio.</li>
-              </ul>
+            <h3>Os Três Níveis</h3>
+            <ul>
+              <li><strong>Por Que (Why):</strong> O propósito, a causa, a crença. Por que a organização existe? Por que você faz o que faz? Poucos sabem articular isso claramente.</li>
+              <li><strong>Como (How):</strong> O processo, os valores, a proposta diferenciada. Como você realiza o seu propósito? É o que torna a abordagem única.</li>
+              <li><strong>O Que (What):</strong> Os produtos, serviços e resultados tangíveis. Toda organização sabe O QUE faz. É o nível mais externo e óbvio.</li>
+            </ul>
 
-              <h3 className="font-semibold text-lg mt-6 mb-2" style={{ color: darkMode ? "#e2e8f0" : "#1e293b" }}>
-                Quando Usar
-              </h3>
-              <p>
-                O Golden Circle é ideal para definir o propósito de uma marca, alinhar equipes em torno
-                de uma visão, criar mensagens de marketing inspiradoras e repensar a comunicação
-                estratégica de qualquer organização.
-              </p>
-              <p className="text-xs mt-6 opacity-70">
-                Fonte: Sinek, Simon (2009). Start with Why: How Great Leaders Inspire Everyone to Take
-                Action. Portfolio/Penguin. | TED Talk: "How Great Leaders Inspire Action" (2009).
-              </p>
-            </div>
-          </section>
+            <h3>Quando Usar</h3>
+            <p>
+              O Golden Circle é ideal para definir o propósito de uma marca, alinhar equipes em torno
+              de uma visão, criar mensagens de marketing inspiradoras e repensar a comunicação
+              estratégica de qualquer organização.
+            </p>
+            <p className="text-xs mt-6 opacity-70">
+              Fonte: Sinek, Simon (2009). Start with Why: How Great Leaders Inspire Everyone to Take
+              Action. Portfolio/Penguin. | TED Talk: "How Great Leaders Inspire Action" (2009).
+            </p>
+          </SeoContentSection>
           <SeoFrameworksSection currentSlug="golden-circle-framework-template" />
         </div>
       </main>

@@ -6,6 +6,7 @@ import { UspIcon } from "@/components/icons/usp-icon";
 import { FrameworkStationIcon } from "@/components/icons/framework-station-icon";
 import { Button } from "@/components/ui/button";
 import { ColorPickerPopover } from "@/components/shared/color-picker-popover";
+import { SeoFrameworksSection } from "@/components/shared/seo-frameworks-section";
 import html2canvas from "html2canvas";
 
 /* ── Zone icons for analysis sections ────────────────── */
@@ -515,6 +516,7 @@ export function UspPage() {
               </p>
             </div>
           </section>
+          <SeoFrameworksSection currentSlug="usp-unique-selling-proposition-framework-template" />
         </div>
       </main>
 

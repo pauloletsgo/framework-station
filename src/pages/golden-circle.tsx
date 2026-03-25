@@ -6,6 +6,7 @@ import { GoldenCircleIcon } from "@/components/icons/golden-circle-icon";
 import { FrameworkStationIcon } from "@/components/icons/framework-station-icon";
 import { Button } from "@/components/ui/button";
 import { ColorPickerPopover } from "@/components/shared/color-picker-popover";
+import { SeoFrameworksSection } from "@/components/shared/seo-frameworks-section";
 import html2canvas from "html2canvas";
 
 /* ── Data types ─────────────────────────────────────── */
@@ -351,6 +352,7 @@ export function GoldenCirclePage() {
               </p>
             </div>
           </section>
+          <SeoFrameworksSection currentSlug="golden-circle-framework-template" />
         </div>
       </main>
 

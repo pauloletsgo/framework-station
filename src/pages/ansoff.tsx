@@ -32,6 +32,7 @@ import { SwotQuadrant } from "@/components/swot/swot-quadrant";
 import { SwotCardPool } from "@/components/swot/swot-card-pool";
 import { ColorPickerPopover } from "@/components/shared/color-picker-popover";
 import { SeoContentSection } from "@/components/shared/seo-content-section";
+import { SeoFrameworksSection } from "@/components/shared/seo-frameworks-section";
 import type { SwotCardItem } from "@/components/swot/swot-card";
 import html2canvas from "html2canvas";
 
@@ -683,6 +684,7 @@ export function AnsoffPage() {
               Review, 35(5), 113-124.
             </p>
           </SeoContentSection>
+          <SeoFrameworksSection currentSlug="matriz-de-ansoff-framework-template" />
         </div>
       </main>
 

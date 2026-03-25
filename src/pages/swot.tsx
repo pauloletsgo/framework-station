@@ -32,6 +32,7 @@ import { SwotQuadrant } from "@/components/swot/swot-quadrant";
 import { SwotCardPool } from "@/components/swot/swot-card-pool";
 import { ColorPickerPopover } from "@/components/shared/color-picker-popover";
 import { SeoContentSection } from "@/components/shared/seo-content-section";
+import { SeoFrameworksSection } from "@/components/shared/seo-frameworks-section";
 import type { SwotCardItem } from "@/components/swot/swot-card";
 import html2canvas from "html2canvas";
 
@@ -644,6 +645,7 @@ export function SwotPage() {
               (1965). Business Policy: Text and Cases. Irwin.
             </p>
           </SeoContentSection>
+          <SeoFrameworksSection currentSlug="matriz-swot-framework-template" />
         </div>
       </main>
 

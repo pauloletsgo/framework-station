@@ -36,6 +36,7 @@ import { SwotQuadrant } from "@/components/swot/swot-quadrant";
 import { SwotCardPool } from "@/components/swot/swot-card-pool";
 import { ColorPickerPopover } from "@/components/shared/color-picker-popover";
 import { SeoContentSection } from "@/components/shared/seo-content-section";
+import { SeoFrameworksSection } from "@/components/shared/seo-frameworks-section";
 import type { SwotCardItem } from "@/components/swot/swot-card";
 import html2canvas from "html2canvas";
 
@@ -629,6 +630,7 @@ export function PorterPage() {
               Analyzing Industries and Competitors. Free Press.
             </p>
           </SeoContentSection>
+          <SeoFrameworksSection currentSlug="5-forcas-de-porter-framework-template" />
         </div>
       </main>
 

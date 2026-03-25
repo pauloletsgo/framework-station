@@ -24,6 +24,7 @@ import { TierRow } from "@/components/tier-creator/tier-row";
 import { ImagePool } from "@/components/tier-creator/image-pool";
 import { TierSettingsDialog } from "@/components/tier-creator/tier-settings-dialog";
 import { ColorPickerPopover } from "@/components/shared/color-picker-popover";
+import { SeoFrameworksSection } from "@/components/shared/seo-frameworks-section";
 import { useToast } from "@/hooks/use-toast";
 import html2canvas from "html2canvas";
 
@@ -668,6 +669,7 @@ export function TierListTool() {
               </p>
             </div>
           </section>
+          <SeoFrameworksSection currentSlug="tier-creator-framework-template" />
         </div>
       </main>
 

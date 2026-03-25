@@ -36,7 +36,7 @@ export function Footer() {
           {/* Contato */}
           <div className="space-y-2 text-center flex flex-col items-center">
             <p className="font-semibold text-foreground">
-              Sugestão, dúvidas ou contato
+              Dúvidas ou Sugestões
             </p>
             <div className="space-y-1">
               <a

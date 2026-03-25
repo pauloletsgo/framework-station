@@ -583,10 +583,10 @@ export function BusinessModelCanvasPage() {
         <div
           style={{
             backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
-            color: darkMode ? "#cbd5e1" : "#334155",
+            
           }}
         >
-          <SeoContentSection title="O que é o Business Model Canvas?">
+          <SeoContentSection darkMode={darkMode} title="O que é o Business Model Canvas?">
             <p>
               O Business Model Canvas (BMC) é uma ferramenta de gestão estratégica que permite
               desenvolver e esboçar modelos de negócios novos ou existentes. Ele organiza os

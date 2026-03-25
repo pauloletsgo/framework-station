@@ -636,10 +636,10 @@ export function TierListTool() {
         <div
           style={{
             backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
-            color: darkMode ? "#cbd5e1" : "#334155",
+            
           }}
         >
-          <SeoContentSection title="O que é o Tier Creator?">
+          <SeoContentSection darkMode={darkMode} title="O que é o Tier Creator?">
             <p>
               O Tier Creator (criador de tiers ou classificações) é uma ferramenta que permite
               organizar itens — como produtos, personagens, opções ou qualquer coisa — em níveis

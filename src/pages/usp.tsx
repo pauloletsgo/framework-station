@@ -472,10 +472,10 @@ export function UspPage() {
         <div
           style={{
             backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
-            color: darkMode ? "#cbd5e1" : "#334155",
+            
           }}
         >
-          <SeoContentSection title="O que é Unique Selling Proposition (USP)?">
+          <SeoContentSection darkMode={darkMode} title="O que é Unique Selling Proposition (USP)?">
             <p>
               A Unique Selling Proposition (USP), ou Proposta Única de Valor, é o fator ou benefício
               que torna um produto ou serviço diferente e melhor que os concorrentes. É a razão principal

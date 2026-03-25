@@ -304,10 +304,10 @@ export function GoldenCirclePage() {
         <div
           style={{
             backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
-            color: darkMode ? "#cbd5e1" : "#334155",
+            
           }}
         >
-          <SeoContentSection title="O que é o Golden Circle?">
+          <SeoContentSection darkMode={darkMode} title="O que é o Golden Circle?">
             <p>
               O Golden Circle (Círculo Dourado) é um modelo de liderança e comunicação que propõe que
               organizações e líderes inspiradores pensam, agem e se comunicam de dentro para fora —

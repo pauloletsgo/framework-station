@@ -589,10 +589,10 @@ export function PorterPage() {
         <div
           style={{
             backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
-            color: darkMode ? "#cbd5e1" : "#334155",
+            
           }}
         >
-          <SeoContentSection title="O que são as 5 Forças de Porter?">
+          <SeoContentSection darkMode={darkMode} title="O que são as 5 Forças de Porter?">
             <p>
               O modelo das 5 Forças de Porter é uma ferramenta de análise competitiva que examina cinco
               forças que determinam a intensidade da competição e a atratividade de um mercado ou indústria.

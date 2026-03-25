@@ -274,10 +274,16 @@ export function BcgPage() {
               item.style.transition = "none";
             }
           );
-          // Fix vertical text mirroring in html2canvas
+          // Fix vertical text mirroring: replace with stacked characters
           clonedEl.querySelectorAll<HTMLElement>("[data-vertical-text]").forEach((el) => {
-            el.style.writingMode = "vertical-lr";
+            const text = el.textContent || "";
+            el.style.writingMode = "initial";
             el.style.transform = "none";
+            el.style.fontSize = "10px";
+            el.style.lineHeight = "1.3";
+            el.style.letterSpacing = "2px";
+            el.style.textAlign = "center";
+            el.innerHTML = text.split("").join("<br>");
           });
         },
       });
@@ -649,10 +655,10 @@ export function BcgPage() {
         <div
           style={{
             backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
-            color: darkMode ? "#cbd5e1" : "#334155",
+            
           }}
         >
-          <SeoContentSection title="O que é a Matriz BCG?">
+          <SeoContentSection darkMode={darkMode} title="O que é a Matriz BCG?">
             <p>
               A Matriz BCG (Boston Consulting Group Matrix), também chamada de Matriz de Crescimento-Participação,
               é uma ferramenta de análise de portfólio que classifica produtos ou unidades de negócio em

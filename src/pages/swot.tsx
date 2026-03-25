@@ -262,10 +262,16 @@ export function SwotPage() {
         useCORS: true,
         scale: 2,
         onclone: (_doc: Document, clonedEl: HTMLElement) => {
-          // Fix vertical text mirroring in html2canvas
+          // Fix vertical text mirroring: replace with stacked characters
           clonedEl.querySelectorAll<HTMLElement>("[data-vertical-text]").forEach((el) => {
-            el.style.writingMode = "vertical-lr";
+            const text = el.textContent || "";
+            el.style.writingMode = "initial";
             el.style.transform = "none";
+            el.style.fontSize = "10px";
+            el.style.lineHeight = "1.3";
+            el.style.letterSpacing = "2px";
+            el.style.textAlign = "center";
+            el.innerHTML = text.split("").join("<br>");
           });
         },
       });
@@ -599,10 +605,10 @@ export function SwotPage() {
         <div
           style={{
             backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
-            color: darkMode ? "#cbd5e1" : "#334155",
+            
           }}
         >
-          <SeoContentSection title="O que é a Matriz SWOT?">
+          <SeoContentSection darkMode={darkMode} title="O que é a Matriz SWOT?">
             <p>
               A Matriz SWOT (também conhecida como Análise SWOT ou FOFA em português) é uma
               ferramenta de planejamento estratégico utilizada para identificar Forças (Strengths),

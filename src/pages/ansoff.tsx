@@ -274,10 +274,16 @@ export function AnsoffPage() {
               item.style.transition = "none";
             }
           );
-          // Fix vertical text mirroring in html2canvas
+          // Fix vertical text mirroring: replace with stacked characters
           clonedEl.querySelectorAll<HTMLElement>("[data-vertical-text]").forEach((el) => {
-            el.style.writingMode = "vertical-lr";
+            const text = el.textContent || "";
+            el.style.writingMode = "initial";
             el.style.transform = "none";
+            el.style.fontSize = "10px";
+            el.style.lineHeight = "1.3";
+            el.style.letterSpacing = "2px";
+            el.style.textAlign = "center";
+            el.innerHTML = text.split("").join("<br>");
           });
         },
       });
@@ -649,10 +655,10 @@ export function AnsoffPage() {
         <div
           style={{
             backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
-            color: darkMode ? "#cbd5e1" : "#334155",
+            
           }}
         >
-          <SeoContentSection title="O que é a Matriz de Ansoff?">
+          <SeoContentSection darkMode={darkMode} title="O que é a Matriz de Ansoff?">
             <p>
               A Matriz de Ansoff, também conhecida como Matriz Produto-Mercado, é uma ferramenta de
               planejamento estratégico que ajuda empresas a definir suas estratégias de crescimento.

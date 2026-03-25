@@ -261,6 +261,13 @@ export function SwotPage() {
         backgroundColor: darkMode ? "#0f0f1a" : "#f5f5f5",
         useCORS: true,
         scale: 2,
+        onclone: (_doc: Document, clonedEl: HTMLElement) => {
+          // Fix vertical text mirroring in html2canvas
+          clonedEl.querySelectorAll<HTMLElement>("[data-vertical-text]").forEach((el) => {
+            el.style.writingMode = "vertical-lr";
+            el.style.transform = "none";
+          });
+        },
       });
       const url = canvas.toDataURL("image/png");
       const link = document.createElement("a");
@@ -412,6 +419,7 @@ export function SwotPage() {
                   }}
                 >
                   <span
+                    data-vertical-text
                     className="font-bold text-xs tracking-wider"
                     style={{
                       writingMode: "vertical-rl",
@@ -459,6 +467,7 @@ export function SwotPage() {
                   }}
                 >
                   <span
+                    data-vertical-text
                     className="font-bold text-xs tracking-wider"
                     style={{
                       writingMode: "vertical-rl",
@@ -644,7 +653,7 @@ export function SwotPage() {
               (1965). Business Policy: Text and Cases. Irwin.
             </p>
           </SeoContentSection>
-          <SeoFrameworksSection currentSlug="matriz-swot-framework-template" />
+          <SeoFrameworksSection currentSlug="matriz-swot-framework-template" darkMode={darkMode} />
         </div>
       </main>
 
@@ -659,6 +668,10 @@ export function SwotPage() {
             print-color-adjust: exact !important;
             -webkit-print-color-adjust: exact !important;
             color-adjust: exact !important;
+          }
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
           }
 
           body * {

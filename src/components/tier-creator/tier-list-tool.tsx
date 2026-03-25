@@ -660,7 +660,7 @@ export function TierListTool() {
               visual e intuitiva — desde produtos e serviços até ideias e prioridades de projeto.
             </p>
           </SeoContentSection>
-          <SeoFrameworksSection currentSlug="tier-creator-framework-template" />
+          <SeoFrameworksSection currentSlug="tier-creator-framework-template" darkMode={darkMode} />
         </div>
       </main>
 
@@ -673,8 +673,20 @@ export function TierListTool() {
           /* Force browser to print background colors and images */
           * {
             print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             -webkit-print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
           }
 
           body * {

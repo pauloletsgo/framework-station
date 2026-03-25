@@ -628,7 +628,7 @@ export function BusinessModelCanvasPage() {
               Handbook for Visionaries, Game Changers, and Challengers. John Wiley & Sons.
             </p>
           </SeoContentSection>
-          <SeoFrameworksSection currentSlug="business-model-canvas-framework-template" />
+          <SeoFrameworksSection currentSlug="business-model-canvas-framework-template" darkMode={darkMode} />
         </div>
       </main>
 
@@ -640,8 +640,20 @@ export function BusinessModelCanvasPage() {
         @media print {
           * {
             print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             -webkit-print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
           }
 
           body * {

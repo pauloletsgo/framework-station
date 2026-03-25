@@ -274,6 +274,11 @@ export function BcgPage() {
               item.style.transition = "none";
             }
           );
+          // Fix vertical text mirroring in html2canvas
+          clonedEl.querySelectorAll<HTMLElement>("[data-vertical-text]").forEach((el) => {
+            el.style.writingMode = "vertical-lr";
+            el.style.transform = "none";
+          });
         },
       });
       const url = canvas.toDataURL("image/png");
@@ -390,7 +395,7 @@ export function BcgPage() {
                   }}
                 >
                   <span
-                    className="font-bold text-xs tracking-wider"
+                    data-vertical-text className="font-bold text-xs tracking-wider"
                     style={{
                       writingMode: "vertical-rl",
                       transform: "rotate(180deg)",
@@ -465,7 +470,7 @@ export function BcgPage() {
                       }}
                     >
                       <span
-                        className="font-bold text-xs tracking-wider"
+                        data-vertical-text className="font-bold text-xs tracking-wider"
                         style={{
                           writingMode: "vertical-rl",
                           transform: "rotate(180deg)",
@@ -511,7 +516,7 @@ export function BcgPage() {
                       }}
                     >
                       <span
-                        className="font-bold text-xs tracking-wider"
+                        data-vertical-text className="font-bold text-xs tracking-wider"
                         style={{
                           writingMode: "vertical-rl",
                           transform: "rotate(180deg)",
@@ -683,7 +688,7 @@ export function BcgPage() {
               Consulting Group.
             </p>
           </SeoContentSection>
-          <SeoFrameworksSection currentSlug="matriz-bcg-framework-template" />
+          <SeoFrameworksSection currentSlug="matriz-bcg-framework-template" darkMode={darkMode} />
         </div>
       </main>
 
@@ -695,8 +700,20 @@ export function BcgPage() {
         @media print {
           * {
             print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             -webkit-print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
           }
 
           body * {

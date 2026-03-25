@@ -629,7 +629,7 @@ export function PorterPage() {
               Analyzing Industries and Competitors. Free Press.
             </p>
           </SeoContentSection>
-          <SeoFrameworksSection currentSlug="5-forcas-de-porter-framework-template" />
+          <SeoFrameworksSection currentSlug="5-forcas-de-porter-framework-template" darkMode={darkMode} />
         </div>
       </main>
 
@@ -641,8 +641,20 @@ export function PorterPage() {
         @media print {
           * {
             print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             -webkit-print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
           }
 
           body * {

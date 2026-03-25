@@ -506,7 +506,7 @@ export function UspPage() {
               Fonte: Reeves, Rosser (1961). Reality in Advertising. Alfred A. Knopf.
             </p>
           </SeoContentSection>
-          <SeoFrameworksSection currentSlug="usp-unique-selling-proposition-framework-template" />
+          <SeoFrameworksSection currentSlug="usp-unique-selling-proposition-framework-template" darkMode={darkMode} />
         </div>
       </main>
 
@@ -518,8 +518,20 @@ export function UspPage() {
         @media print {
           * {
             print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             -webkit-print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
           }
           body * { visibility: hidden; }
           .print-area, .print-area * { visibility: visible !important; }

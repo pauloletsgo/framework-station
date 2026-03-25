@@ -342,7 +342,7 @@ export function GoldenCirclePage() {
               Action. Portfolio/Penguin. | TED Talk: "How Great Leaders Inspire Action" (2009).
             </p>
           </SeoContentSection>
-          <SeoFrameworksSection currentSlug="golden-circle-framework-template" />
+          <SeoFrameworksSection currentSlug="golden-circle-framework-template" darkMode={darkMode} />
         </div>
       </main>
 
@@ -354,8 +354,20 @@ export function GoldenCirclePage() {
         @media print {
           * {
             print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             -webkit-print-color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
             color-adjust: exact !important;
+
+          html, body {
+            background: ${darkMode ? "#0f0f1a" : "#ffffff"} !important;
+          }
           }
           body * { visibility: hidden; }
           .print-area, .print-area * { visibility: visible !important; }

@@ -80,7 +80,7 @@ export function AnsoffPage() {
   const matrixRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.title = "Matriz de Ansoff - Framework Station";
+    document.title = "Template Gratuito: Matriz de Ansoff - Framework Station";
   }, []);
 
   useEffect(() => {

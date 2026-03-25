@@ -75,7 +75,7 @@ export function SwotPage() {
   const matrixRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.title = "Matriz SWOT - Framework Station";
+    document.title = "Template Gratuito: Matriz SWOT - Framework Station";
   }, []);
 
   // When toggling dark/light mode, reset card color to a sensible default

@@ -123,7 +123,7 @@ export function PorterPage() {
   const diagramRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.title = "5 Forças de Porter - Framework Station";
+    document.title = "Template Gratuito: 5 Forças de Porter - Framework Station";
   }, []);
 
   useEffect(() => {

@@ -163,7 +163,7 @@ export function BusinessModelCanvasPage() {
   const titleInputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
-    document.title = "Business Model Canvas - Framework Station";
+    document.title = "Template Gratuito: Business Model Canvas - Framework Station";
   }, []);
 
   useEffect(() => {

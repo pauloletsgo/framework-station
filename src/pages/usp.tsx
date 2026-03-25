@@ -96,7 +96,7 @@ export function UspPage() {
   const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.title = "USP - Unique Selling Proposition - Framework Station";
+    document.title = "Template Gratuito: USP (Unique Selling Proposition) - Framework Station";
   }, []);
 
   useEffect(() => {

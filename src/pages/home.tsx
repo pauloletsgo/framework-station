@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { FrameworkStationIcon } from "@/components/icons/framework-station-icon";
 import { PageLayout } from "@/components/layout/page-layout";
 import { FrameworkCard } from "@/components/shared/framework-card";
@@ -6,6 +6,10 @@ import { SearchFilterBar } from "@/components/shared/search-filter-bar";
 import { frameworks } from "@/data/frameworks-catalog";
 
 export function HomePage() {
+  useEffect(() => {
+    document.title = "Framework Station - Templates gratuitos dos frameworks de negócio mais utilizados!";
+  }, []);
+
   const [search, setSearch] = useState("");
 
   const filtered = useMemo(() => {

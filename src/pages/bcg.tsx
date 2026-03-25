@@ -80,7 +80,7 @@ export function BcgPage() {
   const matrixRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.title = "Matriz BCG - Framework Station";
+    document.title = "Template Gratuito: Matriz BCG - Framework Station";
   }, []);
 
   useEffect(() => {

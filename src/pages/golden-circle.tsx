@@ -46,7 +46,7 @@ export function GoldenCirclePage() {
   const canvasRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.title = "Golden Circle - Framework Station";
+    document.title = "Template Gratuito: Golden Circle - Framework Station";
   }, []);
 
   useEffect(() => {

@@ -149,6 +149,14 @@ const quadrantConfig = [
 
 export function BusinessModelCanvasPage() {
   const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
   const [title, setTitle] = useState("My Business Model Canvas");
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [quadrants, setQuadrants] = useState<BmcQuadrantData[]>(

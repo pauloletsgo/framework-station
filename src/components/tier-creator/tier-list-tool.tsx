@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import {
   DndContext,
   DragOverlay,
@@ -74,6 +74,15 @@ export function TierListTool() {
   const [poolItems, setPoolItems] = useState<TierItem[]>([]);
   const [rowBgColor, setRowBgColor] = useState("#1e293b");
   const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
+
   const [showRowBgPicker, setShowRowBgPicker] = useState(false);
   const [settingsForTier, setSettingsForTier] = useState<string | null>(null);
   const [activeId, setActiveId] = useState<UniqueIdentifier | null>(null);

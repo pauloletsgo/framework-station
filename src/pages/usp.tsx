@@ -91,6 +91,14 @@ export function UspPage() {
     }
   });
   const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
   const [bgColor, setBgColor] = useState("#1e293b");
   const [showBgPicker, setShowBgPicker] = useState(false);
   const canvasRef = useRef<HTMLDivElement>(null);

@@ -112,6 +112,14 @@ function generateCardId() {
 
 export function PorterPage() {
   const [darkMode, setDarkMode] = useState(true);
+
+  useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [darkMode]);
   const [forces, setForces] = useState<ForceData[]>(
     FORCE_IDS.map((id) => ({ id, items: [] }))
   );
